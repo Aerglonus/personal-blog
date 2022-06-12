@@ -1,5 +1,6 @@
 languageCode: en-us
 paginate: 5
+theme: stack
 title: Lonus Blog
 
 languages:
@@ -12,7 +13,7 @@ languages:
         title: 로누스
         weight: 4
 # Change it to your Disqus shortname before using
-disqusShortname: lonus
+disqusShortname: NotLonus
 
 # GA Tracking ID
 googleAnalytics:
@@ -46,11 +47,11 @@ params:
 
     sidebar:
         emoji: 🧑‍💻️
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: Just dumping everything I learn.
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            src: img/avatar200.jpg
 
     article:
         math: false
@@ -65,7 +66,7 @@ params:
         provider: utterances
 
         disqusjs:
-            shortname: lonus  
+            shortname: NotLonus 
             apiUrl:
             apiKey:
             admin:
@@ -169,10 +170,10 @@ params:
 
     colorScheme:
         # Display toggle
-        toggle: true
+        toggle: false
 
         # Available values: auto, light, dark
-        default: auto
+        default: dark
 
     imageProcessing:
         cover:
@@ -189,15 +190,20 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/aerglonus
           params:
               icon: brand-github
 
         - identifier: twitter
           name: Twitter
-          url: https://twitter.com
+          url: https://twitter.com/aerglonus
           params:
               icon: brand-twitter
+        - identifier: twitch
+          name: Twitch
+          url: https://twitch.tv/aerglonus
+          params:
+            icon: brand-twitch
 
 related:
     includeNewer: true
@@ -227,9 +233,9 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-module:
+# module:
   # uncomment line below for temporary local development of module
   # replacements: "github.com/CaiJimmy/hugo-theme-stack/v3 -> ../../hugo-theme-stack"
-  imports:
-    - path: github.com/CaiJimmy/hugo-theme-stack/v3
-      disable: false
+  #imports:
+   # - path: github.com/CaiJimmy/hugo-theme-stack/v3
+    #  disable: false
