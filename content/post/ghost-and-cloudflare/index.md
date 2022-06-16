@@ -30,23 +30,22 @@ You are here for a reason
 # Requirements:
 
 - Nodejs (v16x)
-  
+
 - NGIX
-  
+
 - Ubuntu 20.04
-  
+
 - MySQL
-  
+
 - Cloudflare account.
-  
+
 - Domain name.
-  
+
 - Cloudflared tunnel service.
-  
+
 - Ghost
-  
+
 - Certbot
-  
 
 > **notice:** If you doing in on a old machine keep in mind that you might have a bunch of error and crashes one of them its explained at the end.
 
@@ -232,7 +231,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 ## Installing NGINX and CLOUDFLARE plugins
 
-#### Installing NGINX plugin
+### Installing NGINX plugin
 
 In order to automatically put the certificates in the site config file we must need nginx certbot plugin, so to install it run :
 
@@ -240,7 +239,7 @@ In order to automatically put the certificates in the site config file we must n
 sudo apt install certbot python3-certbot-nginx
 ```
 
-#### Installing and setting up cloudflare plugin
+### Installing and setting up cloudflare plugin
 
 And since where we installing the site the IP isn't a public one we need to get the certificates by doing dns challenges to cloudflare so lets install the certbot plugin first :
 
@@ -251,7 +250,9 @@ sudo apt install certbot python3-certbot-dns-cloudflare
 ---
 
 ### Generate an API token for CloudFlare
+
 > At this point im assuming you have already added your domain name to Cloudflare as your DNS provide.
+
 ---
 
 - Navigate to [Cloudflare | Web Performance &amp; Security](https://dash.cloudflare.com/profile/api-tokens)
@@ -433,10 +434,9 @@ If you check your site`conf` file the certificates should be applied and all the
 
 > For more information on how to renew the type `certbot --help` or type `sudo certbot renew` this wil renew all your certificates so if you have multiple certificates for different domains and you want to renew a specific one run `certbot certonly --force-renew -d yourdomain.com`.
 
-# Setting up Cloudflare Tunnel
 
+## Setting up Cloudflare Tunnel
 ---
-
 ### Install the Cloudflared service:
 
 **NOTE**
@@ -533,9 +533,9 @@ ingress:
 ```
 
 - **hostname:** Here add the domain you are going to use. Make sure is the same you put in your Ghost setup.
-  
+
 - **service:** Since we added SSL certificates and NGINX it's in charge of redirecting everything we don't need to put the `localhost:2368` where Ghost server is normally running.
-  
+
 - **originRequest:**
   
   - **noTLSVerfiy: true** # Don't remove this or you are going to get the `ERROR_TO_MANY_REDIRECTS` error.
