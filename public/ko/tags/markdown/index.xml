@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>markdown on 로누스</title>
+        <link>/ko/tags/markdown/</link>
+        <description>Recent content in markdown on 로누스</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 11 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/ko/tags/markdown/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OBS Split Audio Guide</title>
+        <link>/ko/p/obs-split-audio-guide/</link>
+        <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
+        
+        <guid>/ko/p/obs-split-audio-guide/</guid>
+        <description>&lt;img src="/ko/p/obs-split-audio-guide/obs-studio.jpeg" alt="Featured image of post OBS Split Audio Guide" /&gt;&lt;h2 id=&#34;what-you-need&#34;&gt;&lt;strong&gt;What you need:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;1 - OBS studio&lt;/p&gt;
+&lt;p&gt;2 - win-capture-audio, this is the program you need to split the audio. You can download it here :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bozbez/win-capture-audio/releases/download/v2.2.2-beta/win-capture-audio-2.2.2-beta-setup.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/bozbez/win-capture-audio/releases/download/v2.2.2-beta/win-capture-audio-2.2.2-beta-setup.exe&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;installation-and-usage&#34;&gt;Installation and Usage&lt;/h2&gt;
+&lt;p&gt;Once you downloaded the program run the installer (make sure OBS is not open) it&amp;rsquo;s a fast installation once it finish you can launch OBS now if you add a new source there should be a new option called &lt;code&gt;Application Audio Output Capture&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image1.png&#34;
+	width=&#34;459&#34;
+	height=&#34;361&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image1_hu9ffb34005aabd20126d4a4472a1323ba_19594_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image1_hu9ffb34005aabd20126d4a4472a1323ba_19594_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 1 &#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;127&#34;
+		data-flex-basis=&#34;305px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;adding-the-audio-sources&#34;&gt;Adding the audio sources:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Since you can add multiple programs to the same source I recommend creating a source specially for each type of group for example did it like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image2.png&#34;
+	width=&#34;391&#34;
+	height=&#34;64&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image2_huf3ae6b003c27ff49d290ae0dd35f39a0_3031_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image2_huf3ae6b003c27ff49d290ae0dd35f39a0_3031_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;610&#34;
+		data-flex-basis=&#34;1466px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;Music - Audio&lt;/code&gt; group it&amp;rsquo;s a must since here is where you&amp;rsquo;re going to add the programs that bring music to the stream like &lt;strong&gt;Spotify&lt;/strong&gt; or &lt;strong&gt;Google chrome(nightbot/youtube)&lt;/strong&gt; and its gonna allow to separate it from the VOD audio track.&lt;/p&gt;
+&lt;p&gt;Also to avoid having to add each audio source to different scenes a good trick is creating a new scene and there add all the audio sources groups you&amp;rsquo;re gonna use and once you are done with setting up everything all you have to do is add that scene as a source in the multiple scenes that you use so every time you add a new group of audio sources it automatically adds them to the mixer of each scene.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image3.png&#34;
+	width=&#34;789&#34;
+	height=&#34;391&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image3_hub1c2d9378c425ad6ca4960d0f4ae8131_13240_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image3_hub1c2d9378c425ad6ca4960d0f4ae8131_13240_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Scene exclusively to audio sources:&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;484px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image4.png&#34;
+	width=&#34;791&#34;
+	height=&#34;392&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image4_hu1ee4fb4b48fde016db86cf8494890e38_27524_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image4_hu1ee4fb4b48fde016db86cf8494890e38_27524_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;currently in Gaming scene with the Audio scene as a source:&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;484px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;add-your-programs&#34;&gt;&lt;strong&gt;Add your programs:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Here you have to ways to add programs/games.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Add from currently active sessions menu&lt;/strong&gt;: In this menu it should give you a list with the most common program. (ex: Discord, Spotify) and some others that the plugin might detect. Once you selected the program just click in the &lt;code&gt;Add Executable&lt;/code&gt;. You can add multiple programs as a group to the same audio source.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image5.png&#34;
+	width=&#34;722&#34;
+	height=&#34;612&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image5_hu55ae41cbdc8431eb5ea5d6c34f85c1f0_17686_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image5_hu55ae41cbdc8431eb5ea5d6c34f85c1f0_17686_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;117&#34;
+		data-flex-basis=&#34;283px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Using the &lt;code&gt;+&lt;/code&gt; next to the executables area:&lt;/strong&gt; If the program you want to add to a certain group of sources doesn&amp;rsquo;t show up in the &lt;code&gt;Session&lt;/code&gt; menu you might wanna added the program executable manually. For example if you want to add &lt;strong&gt;Google Chrome&lt;/strong&gt; and it doesn&amp;rsquo;t show up in the list you add it by clicking in the &lt;code&gt;+&lt;/code&gt; button and type &lt;code&gt;chrome.exe&lt;/code&gt; and press &lt;strong&gt;ok&lt;/strong&gt; and it should be added to the &lt;strong&gt;Executables&lt;/strong&gt; area.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image6.png&#34;
+	width=&#34;722&#34;
+	height=&#34;612&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image6_hu007f60a4768f6e25a53127fa6f3afc6b_23688_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image6_hu007f60a4768f6e25a53127fa6f3afc6b_23688_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;117&#34;
+		data-flex-basis=&#34;283px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT !! : SINCE OBS IS CREATING AUDIO TOO BECAUSE YOU HAVE CLIPS/ALERTS AND SUCH THINGS AS BROWSER SOURCE INSIDE OBS YOU SHOULD ADD OBS ITSELF AS AN AUDIO SOURCE SO VIEWERS GET TO HEAR THEM ON STREAM&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If the program you want to add doesn&amp;rsquo;t show up in the &lt;strong&gt;Session&lt;/strong&gt; menu and you have to manually add it but you dont know whats the name of the executable you can get it in the &lt;code&gt;task manager&lt;/code&gt; in the &lt;code&gt;details&lt;/code&gt; tab. (&lt;code&gt;Open it by pressing Windows key + type taksmngr&lt;/code&gt; and it should be the first option) there you can see all the programs executable names. (ex: &lt;code&gt;chrome.exe&lt;/code&gt;). Most of the time the executable is &lt;code&gt;programname.exe&lt;/code&gt; but sometimes its different.(ex: for Apex Legends is &lt;code&gt;r5apex.exe&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE - League of Legends:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For league you have to add two sources &lt;code&gt;LeagueClientUxRender.exe&lt;/code&gt; and &lt;code&gt;League of Legends.exe&lt;/code&gt; the first one is for the &lt;strong&gt;league client&lt;/strong&gt; audio and the second one is for when youre inside the game audio. Both should automatically appear in the session menu when you open the client and when you get in a game. (you can set up the second by going into a custom game/practice tool).&lt;/p&gt;
+&lt;h2 id=&#34;telling-twitch-which-applications-audio-you-want-to-get-saved-in-the-vod-audio&#34;&gt;&lt;strong&gt;Telling Twitch which applications audio you want to get saved in the VOD audio:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Inside OBS settings you want to change the &lt;code&gt;Output mode&lt;/code&gt; from &lt;strong&gt;simple&lt;/strong&gt; to &lt;strong&gt;advanced&lt;/strong&gt; once you do this you should see the &lt;code&gt;Twitch VOD Track&lt;/code&gt; option under the &lt;code&gt;Audio Track&lt;/code&gt; select the checkbox and by default it has the track &lt;code&gt;2&lt;/code&gt; you can leave it as it is or change it, up to you. Just keep in mind that it should not be the same as the &lt;code&gt;Audio Track&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image7.png&#34;
+	width=&#34;983&#34;
+	height=&#34;758&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image7_hu4ddd70b6cae4dcbd5cded0aea2e91f65_39581_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image7_hu4ddd70b6cae4dcbd5cded0aea2e91f65_39581_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;129&#34;
+		data-flex-basis=&#34;311px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;disabling-audio-track-&#34;&gt;Disabling audio track :&lt;/h2&gt;
+&lt;p&gt;Once you have the option enabled and all your audio sources added the next step disabling the track &lt;code&gt;2&lt;/code&gt; to the sources that you don&amp;rsquo;t want to be saved in the VOD.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Remember the &lt;code&gt;Music - Audio&lt;/code&gt; source we created before here it&amp;rsquo;s why we need it to be like that.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For this you click in the cog wheel of any audio source and go to &lt;code&gt;Advanced Audio Properties&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image8.png&#34;
+	width=&#34;324&#34;
+	height=&#34;399&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image8_hucf5a3dcc339646b31f145536220f25a1_12819_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image8_hucf5a3dcc339646b31f145536220f25a1_12819_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;81&#34;
+		data-flex-basis=&#34;194px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Then a new window should pop-up and it should show you all the audio sources and their &lt;code&gt;audio tracks&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image9.png&#34;
+	width=&#34;1102&#34;
+	height=&#34;372&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image9_hu91299b08cf1f9234921188f17a53d789_28416_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image9_hu91299b08cf1f9234921188f17a53d789_28416_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;296&#34;
+		data-flex-basis=&#34;710px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;See how we have multiple numbers and check boxes in &lt;code&gt;Tracks&lt;/code&gt;. Remember that by default &lt;code&gt;Twitch VOD Track&lt;/code&gt; that is selected in Settings is the track &lt;code&gt;2&lt;/code&gt;, since we don&amp;rsquo;t want Twitch to save our&lt;code&gt;Music - Audio&lt;/code&gt; in the VOD what we do is we uncheck the track &lt;code&gt;2&lt;/code&gt; from &lt;code&gt;Music - Audio&lt;/code&gt; or any other audio source you want to exclude from the VOD.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/ko/p/obs-split-audio-guide/image10.png&#34;
+	width=&#34;1102&#34;
+	height=&#34;372&#34;
+	srcset=&#34;/ko/p/obs-split-audio-guide/image10_huc12bd4d2bb6c8a04536b62e75df21a15_28817_480x0_resize_box_3.png 480w, /ko/p/obs-split-audio-guide/image10_huc12bd4d2bb6c8a04536b62e75df21a15_28817_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;296&#34;
+		data-flex-basis=&#34;710px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Only uncheck the track that you selected as your twitch vod track because if you uncheck any other track not only it wont get recorded in the VOD, viewers won&amp;rsquo;t be able to listen to that source on stream.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now from now on your vods should not record any music source.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

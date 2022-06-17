@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='A guide to teach you how to run Ghost and Cloudflare Argo Tunnel'><title>How to install &amp; host Ghost with Cloudflare Argo tunnel</title>
+
+<link rel='canonical' href='/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/'>
+
+<link rel="stylesheet" href="/scss/style.min.d03848af3395ea635c77881e6e10ae46e11d5b897ed2ec25484bc1c030c8b667.css"><meta property='og:title' content='How to install &amp; host Ghost with Cloudflare Argo tunnel'>
+<meta property='og:description' content='A guide to teach you how to run Ghost and Cloudflare Argo Tunnel'>
+<meta property='og:url' content='/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/'>
+<meta property='og:site_name' content='Lonus'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='guide' /><meta property='article:tag' content='self-hosted' /><meta property='article:tag' content='linux' /><meta property='article:tag' content='cms' /><meta property='article:published_time' content='2022-06-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-06-15T00:00:00&#43;00:00'/><meta property='og:image' content='/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost.png' />
+<meta name="twitter:site" content="@aerglonus">
+    <meta name="twitter:creator" content="@aerglonus"><meta name="twitter:title" content="How to install &amp; host Ghost with Cloudflare Argo tunnel">
+<meta name="twitter:description" content="A guide to teach you how to run Ghost and Cloudflare Argo Tunnel"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost.png' />
+<link rel="shortcut icon" href="/favicon.png" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YMDYGPZL6S"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-YMDYGPZL6S', { 'anonymize_ip': false });
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7891761786816782"
+  crossorigin="anonymous"></script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar200_hua5cabf616482f17f7f951066ed6e9d94_9155_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Lonus</a></h1>
+            <h2 class="site-description">Just dumping everything I learn.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/aerglonus'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitch.tv/aerglonus'
+                        target="_blank"
+                        title="Twitch"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitch" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <desc>Download more icon variants from https://tabler-icons.io/i/brand-twitch</desc>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />
+  <line x1="16" y1="8" x2="16" y2="12" />
+  <line x1="12" y1="8" x2="12" y2="12" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/aerglonus'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="/" selected>English</option>
+                        
+                            <option value="/ko/" >한국어</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/">
+                <img src="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost_hu7136eeb6509210a4b2b53073df7006c6_75676_800x0_resize_box_3.png"
+                        srcset="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost_hu7136eeb6509210a4b2b53073df7006c6_75676_800x0_resize_box_3.png 800w, /p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost_hu7136eeb6509210a4b2b53073df7006c6_75676_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post How to install &amp; host Ghost with Cloudflare Argo tunnel" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/guide/" >
+                Guide
+            </a>
+        
+            <a href="/categories/sefl-hosting/" >
+                Sefl-hosting
+            </a>
+        
+            <a href="/categories/ghost/" >
+                Ghost
+            </a>
+        
+            <a href="/categories/cloudflare/" >
+                Cloudflare
+            </a>
+        
+            <a href="/categories/linux/" >
+                Linux
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/">How to install &amp; host Ghost with Cloudflare Argo tunnel</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            A guide to teach you how to run Ghost and Cloudflare Argo Tunnel
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 15, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    16 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/" class="link">한국어</a>
+                
+            </div>
+        </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="overview">Overview</h1>
+<p>You are here for a reason</p>
+<ul>
+<li>You want to self host your own site but you don&rsquo;t have a public IP and you can&rsquo;t pay your ISP for one because you&rsquo;re poor.</li>
+</ul>
+<h1 id="requirements">Requirements:</h1>
+<ul>
+<li>
+<p>Nodejs (v16x)</p>
+</li>
+<li>
+<p>NGIX</p>
+</li>
+<li>
+<p>Ubuntu 20.04</p>
+</li>
+<li>
+<p>MySQL</p>
+</li>
+<li>
+<p>Cloudflare account.</p>
+</li>
+<li>
+<p>Domain name.</p>
+</li>
+<li>
+<p>Cloudflared tunnel service.</p>
+</li>
+<li>
+<p>Ghost</p>
+</li>
+<li>
+<p>Certbot</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>notice:</strong> If you doing in on a old machine keep in mind that you might have a bunch of error and crashes one of them its explained at the end.</p>
+</blockquote>
+<h2 id="first-thing">FIRST THING</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt upgrade  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="installing-nginx">INSTALLING NGINX</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Once is installed sometimes it doesn&rsquo;t automatically run <code>NGINX</code> so lets check if its running if not lets enable it</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># to check if its running run </span>
+</span></span><span class="line"><span class="cl">sudo systemctl status nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># if the output doesn&#39;t say its running run</span>
+</span></span><span class="line"><span class="cl">sudo systemctl start nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="installing-nodejs">INSTALLING NODEJS</h2>
+<p><code>sudo apt-get install nodejs</code> doesn&rsquo;t install out of the box the supported version for Ghost so don&rsquo;t do it before running the following command.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -sL https://deb.nodesource.com/setup_16.x <span class="p">|</span> sudo -E bash
+</span></span><span class="line"><span class="cl">sudo apt install -y nodejs
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You can also install it with <code>nvm</code> .</p>
+<p>Install <code>nvm</code> if you don&rsquo;t have it :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh <span class="p">|</span> bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>after you have it installed you can now install nodejs by running:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvm install --lts <span class="c1"># installs the supported version</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># It automatically changes to the version you installed </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># if you want to check the installed version run</span>
+</span></span><span class="line"><span class="cl">nvm ls
+</span></span><span class="line"><span class="cl"><span class="c1"># and itll show you current installed versions and the one</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># is in use. </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If by the time you are doing this the <code>LTS</code> of nodejs changed or the one supported in Ghost you can do:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvm ls-remote <span class="c1"># it&#39;ll show you all the node versions available</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Select the one that ghost supports</span>
+</span></span><span class="line"><span class="cl">nvm install v16.5.1 <span class="c1"># change the version to the one you want</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># and </span>
+</span></span><span class="line"><span class="cl">nvm use v16.5.1 <span class="c1"># again type the one you just installed</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="installing-mysql">INSTALLING MYSQL</h2>
+<p>To install it run the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install mysql-server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="set-up-mysql-user-that-ghost-is-going-to-use">Set up MySQL user that <code>Ghost</code> is going to use</h3>
+<p>Enter MySQL:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mysql -u root -p
+</span></span><span class="line"><span class="cl"><span class="c1"># It&#39;ll prompt you to enter your root password</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now update the user with this command. Make sure to replace <code>password</code> with your own secure password <strong>KEEP THE QUOTE MARKS</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">mysql_native_password</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Doing so it should prompt you with the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">18</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>The password and user are all set up now you can exit MySQL</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">quit</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="err">\</span><span class="n">q</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="installing-ghost-cli-and-setting-ghost-folder">INSTALLING GHOST-CLI AND SETTING GHOST FOLDER</h1>
+<p>To install Ghost-CLI do :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo npm install ghost-cli@latest --location<span class="o">=</span>global
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>For now lets set up where our Ghost site its going to be installed</p>
+<p>Create the folder inside the <code>/var/www</code> path. you can install it wherever you want but this is the preferred path so <code>NGINX</code> can detect your Ghost site.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /var/www/your-site-name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Give the folder the proper permissions to your user :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown <span class="nv">$USER</span>:<span class="nv">$USER</span> /var/www/your-folder-site-name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod <span class="m">775</span> /var/www/your-folder-site-name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="install-ghost">INSTALL GHOST</h2>
+<p>Move to the folder where your Ghost site it&rsquo;s going to be installed</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /var/www/your-folder-site-name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Once you are inside the folder type :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ghost install
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Let it run and when itll prompt you with:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Enter your blog URL: <span class="c1"># put your domain name don&#39;t use localhost unless your installing in development mode</span>
+</span></span><span class="line"><span class="cl">Enter your MySQL hostname: <span class="c1">#keep it in localhost so just press enter</span>
+</span></span><span class="line"><span class="cl">Enter your MySQL username: root <span class="c1"># if you used a different user change it to it.</span>
+</span></span><span class="line"><span class="cl">Enter your MySQL password: <span class="c1"># use the same password you put when we set upt mysql</span>
+</span></span><span class="line"><span class="cl">Enter your Ghost database name: <span class="c1"># just press enter</span>
+</span></span><span class="line"><span class="cl">Setting up <span class="s2">&#34;ghost&#34;</span> system user
+</span></span><span class="line"><span class="cl">? Do you wish to <span class="nb">set</span> up <span class="s2">&#34;ghost&#34;</span> mysql user? <span class="o">(</span>Y/n<span class="o">)</span> : Y 
+</span></span><span class="line"><span class="cl">Do you wish to <span class="nb">set</span> up Nginx? <span class="o">(</span>Y/n<span class="o">)</span> : Y <span class="c1"># so it automatically creates the nginx config files</span>
+</span></span><span class="line"><span class="cl">Setting up SSL : <span class="c1"># press no since we are gonna add manually the certificates to the config file later</span>
+</span></span><span class="line"><span class="cl">Setting up Systemd: <span class="c1"># press yes if you want your site to run on boot</span>
+</span></span><span class="line"><span class="cl">Do you want to start Ghost?: N <span class="c1">#press no since we need to set up more things before we run the site</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="setting-up-certbot-and-letsencrypt-certificates">SETTING UP CERTBOT AND LETSENCRYPT CERTIFICATES</h1>
+<p>If your Ubuntu installation comes with a certbot package preinstalled you might need to remove before doing this</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get remove certbot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Execute the following to make sure you have the latest version of snapd installed</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo snap install core<span class="p">;</span> sudo snap refresh core
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="installing-certbot">Installing CERTBOT</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo snap install --classic certbot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="make-the-command-available">Make the command available</h2>
+<p>Execute the following instruction on the command line on the machine to ensure that the <code>certbot</code> command can be run.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ln -s /snap/bin/certbot /usr/bin/certbot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="installing-nginx-and-cloudflare-plugins">Installing NGINX and CLOUDFLARE plugins</h2>
+<h3 id="installing-nginx-plugin">Installing NGINX plugin</h3>
+<p>In order to automatically put the certificates in the site config file we must need nginx certbot plugin, so to install it run :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install certbot python3-certbot-nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="installing-and-setting-up-cloudflare-plugin">Installing and setting up cloudflare plugin</h3>
+<p>And since where we installing the site the IP isn&rsquo;t a public one we need to get the certificates by doing dns challenges to cloudflare so lets install the certbot plugin first :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install certbot python3-certbot-dns-cloudflare
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="generate-an-api-token-for-cloudflare">Generate an API token for CloudFlare</h3>
+<blockquote>
+<p>At this point im assuming you have already added your domain name to Cloudflare as your DNS provide.</p>
+</blockquote>
+<hr>
+<ul>
+<li>Navigate to <a class="link" href="https://dash.cloudflare.com/profile/api-tokens"  target="_blank" rel="noopener"
+    >Cloudflare | Web Performance &amp; Security</a></li>
+<li>Next to &ldquo;Global API Key&rdquo;, click &ldquo;View&rdquo;.</li>
+<li>Copy the token that&rsquo;s shown. We will need this token in the next step.</li>
+</ul>
+<h3 id="store-the-cloudflare-api-token-on-the-server">Store the CloudFlare API token on the server</h3>
+<hr>
+<p>Create a file to hold your secret API key like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># create the folder where the file its going to be stored</span>
+</span></span><span class="line"><span class="cl">sudo mkdir -p /etc/letsencrypt/secrets
+</span></span><span class="line"><span class="cl"><span class="c1"># create the file</span>
+</span></span><span class="line"><span class="cl">sudo touch /etc/letsencrytp/secrets/cloudflare.ini
+</span></span><span class="line"><span class="cl"><span class="c1"># give the file the permissions</span>
+</span></span><span class="line"><span class="cl">sudo chown root:root /etc/letsencrypt/cloudflare.ini
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">600</span> /etc/letsencrypt/cloudflare.ini
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The insert your API details:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/letsencrypt/secrets/cloudflare.ini
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Put your Cloudfalre account email and API key that you got from the previous step:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Cloudflare API credentials used by Certbot</span>
+</span></span><span class="line"><span class="cl"><span class="nv">dns_cloudflare_email</span> <span class="o">=</span> <span class="c1"># the email you use to login to cloudflare</span>
+</span></span><span class="line"><span class="cl"><span class="nv">dns_cloudflare_api_key</span> <span class="o">=</span> <span class="c1"># the API you got before</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="request-your-certificate-with-certbot">Request your certificate with certbot</h3>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/letsencrypt/secrets/cloudflare.ini
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Enter the email you are going to be using for the renewal notifications and accept the ToS then add the domain you want to get the certificates for (the one you are going to use for the ghost site).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Enter email address <span class="o">(</span>used <span class="k">for</span> urgent renewal and security notices<span class="o">)</span> <span class="o">(</span>Enter <span class="s1">&#39;c&#39;</span> to
+</span></span><span class="line"><span class="cl">cancel<span class="o">)</span>: <span class="c1"># your email here</span>
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">Please <span class="nb">read</span> the Terms of Service at
+</span></span><span class="line"><span class="cl">https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
+</span></span><span class="line"><span class="cl">agree in order to register with the ACME server at
+</span></span><span class="line"><span class="cl">https://acme-v02.api.letsencrypt.org/directory
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl"><span class="o">(</span>A<span class="o">)</span>gree/<span class="o">(</span>C<span class="o">)</span>ancel: a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">Would you be willing to share your email address with the Electronic Frontier
+</span></span><span class="line"><span class="cl">Foundation, a founding partner of the Let<span class="s1">&#39;s Encrypt project and the non-profit
+</span></span></span><span class="line"><span class="cl"><span class="s1">organization that develops Certbot? We&#39;</span>d like to send you email about our work
+</span></span><span class="line"><span class="cl">encrypting the web, EFF news, campaigns, and ways to support digital freedom.
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl"><span class="o">(</span>Y<span class="o">)</span>es/<span class="o">(</span>N<span class="o">)</span>o: n
+</span></span><span class="line"><span class="cl">Please enter in your domain name<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span>comma and/or space separated<span class="o">)</span>  <span class="o">(</span>Enter <span class="s1">&#39;c&#39;</span>
+</span></span><span class="line"><span class="cl">to cancel<span class="o">)</span>: your-site-domain
+</span></span><span class="line"><span class="cl">Obtaining a new certificate
+</span></span><span class="line"><span class="cl">Performing the following challenges:
+</span></span><span class="line"><span class="cl">dns-01 challenge <span class="k">for</span> your-site-domain
+</span></span><span class="line"><span class="cl">Waiting <span class="m">10</span> seconds <span class="k">for</span> DNS changes to propagate
+</span></span><span class="line"><span class="cl">Waiting <span class="k">for</span> verification...
+</span></span><span class="line"><span class="cl">Cleaning up challenges
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">IMPORTANT NOTES:
+</span></span><span class="line"><span class="cl"> - Congratulations! Your certificate and chain have been saved at:
+</span></span><span class="line"><span class="cl">   /etc/letsencrypt/live/your-site-domain/fullchain.pem
+</span></span><span class="line"><span class="cl">   Your key file has been saved at:
+</span></span><span class="line"><span class="cl">   /etc/letsencrypt/live/your-site-domain/privkey.pem
+</span></span><span class="line"><span class="cl">   Your cert will expire on 2022-09-11. To obtain a new or tweaked
+</span></span><span class="line"><span class="cl">   version of this certificate in the future, simply run certbot
+</span></span><span class="line"><span class="cl">   again. To non-interactively renew *all* of your certificates, run
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;certbot renew&#34;</span>
+</span></span><span class="line"><span class="cl"> - Your account credentials have been saved in your Certbot
+</span></span><span class="line"><span class="cl">   configuration directory at /etc/letsencrypt. You should make a
+</span></span><span class="line"><span class="cl">   secure backup of this folder now. This configuration directory will
+</span></span><span class="line"><span class="cl">   also contain certificates and private keys obtained by Certbot so
+</span></span><span class="line"><span class="cl">   making regular backups of this folder is ideal.
+</span></span><span class="line"><span class="cl"> - If you like Certbot, please consider supporting our work by:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Donating to ISRG / Let<span class="err">&#39;</span>s Encrypt:   https://letsencrypt.org/donate
+</span></span><span class="line"><span class="cl">   Donating to EFF:                    https://eff.org/donate-le
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="telling-certbot-to-add-the-certificates-to-the-nginx-config-file-of-your-site">Telling CERTBOT to add the certificates to the nginx config file of your site.</h3>
+<hr>
+<p>To make certbot add them automatically run :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo certbot --nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If after running the commad you get this error :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Plugins selected: Authenticator nginx, Installer nginx
+</span></span><span class="line"><span class="cl">No names were found in your configuration files. Please enter in your domain
+</span></span><span class="line"><span class="cl">name<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span>comma and/or space separated<span class="o">)</span>  <span class="o">(</span>Enter <span class="s1">&#39;c&#39;</span> to cancel<span class="o">)</span>:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Theres a reason why, as you can read Certbot is not capable of detecting the <code>conf</code> of your site that Ghost automatically added to <code>sites-available</code> and <code>Certbot</code> is looking for a <code>conf</code> file with a <code>domain name</code> .</p>
+<p>So a way to fix this is modify the <code>nginx,conf</code> file and include the path to <code>sites-enabled</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># modify the nginx.conf file</span>
+</span></span><span class="line"><span class="cl">sudo nano /etc/nginx/nginx.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And add the following line inside the <code>http {}</code>block</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">include /etc/nginx/sites-enabled/*<span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Save it and reload NGINX.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl reload nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>So now if we run the <code>Certbot</code>command we should get the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># command to put the certificates in the conf file</span>
+</span></span><span class="line"><span class="cl">sudo certbot --nginx
+</span></span><span class="line"><span class="cl"><span class="c1"># Output prompt</span>
+</span></span><span class="line"><span class="cl">Plugins selected: Authenticator nginx, Installer nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Which names would you like to activate HTTPS <span class="k">for</span>?
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">1: yourdomainname
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">Select the appropriate numbers separated by commas and/or spaces, or leave input
+</span></span><span class="line"><span class="cl">blank to <span class="k">select</span> all options shown <span class="o">(</span>Enter <span class="s1">&#39;c&#39;</span> to cancel<span class="o">)</span>: <span class="m">1</span>
+</span></span><span class="line"><span class="cl">Cert not yet due <span class="k">for</span> renewal
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">You have an existing certificate that has exactly the same domains or certificate name you requested and isn<span class="s1">&#39;t close to expiry.
+</span></span></span><span class="line"><span class="cl"><span class="s1">(ref: /etc/letsencrypt/renewal/yoursite.conf)
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">What would you like to do?
+</span></span></span><span class="line"><span class="cl"><span class="s1">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span></span><span class="line"><span class="cl"><span class="s1">1: Attempt to reinstall this existing certificate
+</span></span></span><span class="line"><span class="cl"><span class="s1">2: Renew &amp; replace the cert (limit ~5 per 7 days)
+</span></span></span><span class="line"><span class="cl"><span class="s1">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span></span><span class="line"><span class="cl"><span class="s1">Select the appropriate number [1-2] then [enter] (press &#39;</span>c<span class="s1">&#39; to cancel): 1
+</span></span></span><span class="line"><span class="cl"><span class="s1">Keeping the existing certificate
+</span></span></span><span class="line"><span class="cl"><span class="s1">Deploying Certificate to VirtualHost /etc/nginx/conf.d/yoursite.conf
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+</span></span></span><span class="line"><span class="cl"><span class="s1">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span></span><span class="line"><span class="cl"><span class="s1">1: No redirect - Make no further changes to the webserver configuration.
+</span></span></span><span class="line"><span class="cl"><span class="s1">2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+</span></span></span><span class="line"><span class="cl"><span class="s1">new sites, or if you&#39;</span>re confident your site works on HTTPS. You can undo this
+</span></span><span class="line"><span class="cl">change by editing your web server<span class="s1">&#39;s configuration.
+</span></span></span><span class="line"><span class="cl"><span class="s1">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span></span><span class="line"><span class="cl"><span class="s1">Select the appropriate number [1-2] then [enter] (press &#39;</span>c<span class="err">&#39;</span> to cancel<span class="o">)</span>: <span class="m">2</span>
+</span></span><span class="line"><span class="cl">Redirecting all traffic on port <span class="m">80</span> to ssl in /etc/nginx/conf.d/yoursite.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span class="line"><span class="cl">Congratulations! You have successfully enabled https://yourdomainname
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">You should <span class="nb">test</span> your configuration at:
+</span></span><span class="line"><span class="cl">https://www.ssllabs.com/ssltest/analyze.html?d<span class="o">=</span>yourdomain
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you check your site<code>conf</code> file the certificates should be applied and all the extra configuration too.</p>
+<blockquote>
+<p>For more information on how to renew the type <code>certbot --help</code> or type <code>sudo certbot renew</code> this wil renew all your certificates so if you have multiple certificates for different domains and you want to renew a specific one run <code>certbot certonly --force-renew -d yourdomain.com</code>.</p>
+</blockquote>
+<h2 id="setting-up-cloudflare-tunnel">Setting up Cloudflare Tunnel</h2>
+<hr>
+<h3 id="install-the-cloudflared-service">Install the Cloudflared service:</h3>
+<p><strong>NOTE</strong></p>
+<blockquote>
+<p>A little note on why i don&rsquo;t use the <code>Zero Trust Dashboard</code> and I do this manually.</p>
+<p>1 - <code>Zero Trust dasboard</code> lacks of configuration options compared to when you create the tunnel manually.</p>
+<p><strong>Example:</strong></p>
+<p>If you install the service and create the tunnel through the <code>Zero Trust Dashboard</code> pointing to <code>localhost:2368</code> where Ghost server is running and when you the service you are going to encounter into a problem of <code>ERRO_TO_MANY_REDIRECTS</code> after many hours trying to know why was this happening I found out that setting <code>noTLSVerfiy</code> to <code>true</code> the site loads And the only way to do this is when you create the tunnel manually since the <code>Zero Trust Dashboard</code> doesn&rsquo;t have this option.</p>
+</blockquote>
+<p>First you have to switch to the <code>root</code> user</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># to change to the root user simply type</span>
+</span></span><span class="line"><span class="cl">sudo su
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Once you are in the <code>root</code> user run the following :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb <span class="o">&amp;&amp;</span> dpkg -i cloudflared-linux-amd64.deb
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This will download the cloudflared package install it.</p>
+<h3 id="authenticate-cloudflared">Authenticate cloudflared</h3>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cloudflared tunnel login
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Running this command will:</p>
+<ul>
+<li>Open a browser window and prompt you to log in to your Cloudflare account. After logging in to your account, select your domain.(If after login in it doesn&rsquo;t redirect you the correct page just click on the link that its in your terminal.)</li>
+<li>Generate an account certificate, the <a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-useful-terms/#cert-pem"  target="_blank" rel="noopener"
+    >cert.pem file</a>, in the <a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-useful-terms/#default-cloudflared-directory"  target="_blank" rel="noopener"
+    >default <code>cloudflared</code> directory</a>.</li>
+</ul>
+<h3 id="creating-the-tunnel">Creating the tunnel</h3>
+<hr>
+<p>To create the tunnel run :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create the tunnel</span>
+</span></span><span class="line"><span class="cl">cloudflared tunnel create &lt;NAME&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># Running this command will:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1 - Create a tunnel by establishing a persistent relationship between </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the name you provide and a UUID for your tunnel. At this point, </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># no connection is active within the tunnel yet.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2 - Generate a tunnel credentials file in the default cloudflared directory.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3 - Create a subdomain of .cfargotunnel.com.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#From the output of the command, take note of the tunnel’s UUID and </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the path to your tunnel’s credentials file.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check that the tunnel was creating</span>
+</span></span><span class="line"><span class="cl">cloudflared tunnel list
+</span></span><span class="line"><span class="cl"><span class="c1"># It&#39;ll prompt you with the tunnels that you have created including </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the ones that you created through zero trust dashboard.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After creating the tunnel it&rsquo;s time to create the <code>config.yml</code> file inside the <code>.cloudflared</code> folder this is where you tell the tunnel where and what service to look for.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># move the .cloudflared folder</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.cloudflared
+</span></span><span class="line"><span class="cl"><span class="c1"># If you LS that directory you will see two files</span>
+</span></span><span class="line"><span class="cl">ls 
+</span></span><span class="line"><span class="cl">cert.pem the-tunnel-you-created-UUID.json
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># create the config file</span>
+</span></span><span class="line"><span class="cl">touch config.yml
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Open it and add the following</span>
+</span></span><span class="line"><span class="cl">nano config.yml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Add the following to the config file</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">tunnel</span>: <span class="nx">your</span><span class="p">-</span><span class="nx">tunnel</span><span class="p">-</span><span class="nx">UUID</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">credentials</span><span class="p">-</span><span class="nx">file</span>: <span class="sr">/home/</span>$<span class="nx">USER</span><span class="sr">/.cloudflared/</span><span class="nx">your</span><span class="p">-</span><span class="nx">tunnel</span><span class="p">-</span><span class="nx">UUID</span>.<span class="nx">json</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ingress</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="p">-</span> <span class="nx">hostname</span>: <span class="nx">your</span><span class="p">-</span><span class="nx">domain</span><span class="p">-</span><span class="nx">name</span>  <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">service</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">localhost</span>:<span class="m">443</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">originRequest</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">noTLSVerify</span>: <span class="nx">true</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="p">-</span> <span class="nx">service</span>: <span class="nx">http_status</span>:<span class="m">404</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>hostname:</strong> Here add the domain you are going to use. Make sure is the same you put in your Ghost setup.</p>
+</li>
+<li>
+<p><strong>service:</strong> Since we added SSL certificates and NGINX it&rsquo;s in charge of redirecting everything we don&rsquo;t need to put the <code>localhost:2368</code> where Ghost server is normally running.</p>
+</li>
+<li>
+<p><strong>originRequest:</strong></p>
+<ul>
+<li><strong>noTLSVerfiy: true</strong> # Don&rsquo;t remove this or you are going to get the <code>ERROR_TO_MANY_REDIRECTS</code> error.</li>
+</ul>
+</li>
+</ul>
+<h3 id="route-the-traffic">Route the traffic</h3>
+<hr>
+<p>Now assign a CNAME record that points traffic to your tunnel.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cloudflared tunnel route dns &lt;UUID or NAME&gt; &lt;your-domain&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="run-the-tunnel">Run the tunnel</h3>
+<hr>
+<p>Run the tunnel to see if it works</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cloudflared tunnel run &lt;UUID or NAME&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># you can stop it by doing ctrl+c</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you want to run the tunnel as a service follow Cloudflare&rsquo;s guide <a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/run-tunnel/as-a-service/linux/"  target="_blank" rel="noopener"
+    >Run as a service on Linux · Cloudflare Zero Trust docs.</a> </p>
+<h2 id="running-ghost">Running GHOST</h2>
+<hr>
+<p>If you added Ghost to systemd, all you have to do is start your service</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># The name of the service might be different so look for it in </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /etc/systemd/system/ or /lib/systemd/systemd/</span>
+</span></span><span class="line"><span class="cl">sudo systemctl start ghost_yourdomain  <span class="c1"># you can also stop/disable/enable</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># or </span>
+</span></span><span class="line"><span class="cl">sudo service ghost_yourdomain start <span class="c1"># you can also stop/disable/enable </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>But if you want to run it and see if everything is working properly move to where you have installed it</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /var/www/yoursite
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And run ghost with :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ghost run
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This will launch ghost in debug mode and you will be able to see where it fails. To end the process simply do <code>ctrl + c</code>.</p>
+<h3 id="known-issues">Known issues</h3>
+<hr>
+<p>If you are running Ghost on an older PC its probably that at the moment you want to upload any image (profile picture or post image) Ghost will silently crash and this is probably because your CPU doesn&rsquo;t support <code>SSE4.2</code>.</p>
+<p>This due to the <code>sharp</code> dropped support on older CPU that are running below <code>SSE4.2</code></p>
+<p>So a Fix is disabling the <code>imageOptimization</code> to do this add the following to your <code>conf.production.json</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">  <span class="s2">&#34;imageOptimization&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;resize&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;srcsets&#34;</span><span class="p">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After doing you should be able to upload images to your site <strong>BUT</strong> since you disabled <code>imageOptimization</code> ghost is going to crash after you upload the <code>Publication cover</code> image so keep in mind that.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/guide/">guide</a>
+        
+            <a href="/tags/self-hosted/">self-hosted</a>
+        
+            <a href="/tags/linux/">linux</a>
+        
+            <a href="/tags/cms/">cms</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/obs-split-audio-guide/">
+        
+        
+            <div class="article-image">
+                <img src="/p/obs-split-audio-guide/obs-studio.b5e8accb710eede52f868fba0ce10635_hu852487be308eca7c1a54a1172628f88e_105789_250x150_fill_q75_box_smart1.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post OBS Split Audio Guide"
+                        
+                        data-hash="md5-teisy3EO7eUvho&#43;6DOEGNQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">OBS Split Audio Guide</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" repo="aerglonus/blog-comments"
+    issue-term="pathname" 
+    theme="dark-blue" label="Comment"  crossorigin="anonymous" async>
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme() {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage({
+                    type: 'set-theme',
+                    theme: theme
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+        2021 -
+        
+        2022 Lonus
+    </section>
+
+    
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#first-thing">FIRST THING</a></li>
+    <li><a href="#installing-nginx">INSTALLING NGINX</a></li>
+    <li><a href="#installing-nodejs">INSTALLING NODEJS</a></li>
+    <li><a href="#installing-mysql">INSTALLING MYSQL</a>
+      <ol>
+        <li><a href="#set-up-mysql-user-that-ghost-is-going-to-use">Set up MySQL user that <code>Ghost</code> is going to use</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#install-ghost">INSTALL GHOST</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#installing-certbot">Installing CERTBOT</a></li>
+    <li><a href="#make-the-command-available">Make the command available</a></li>
+    <li><a href="#installing-nginx-and-cloudflare-plugins">Installing NGINX and CLOUDFLARE plugins</a>
+      <ol>
+        <li><a href="#installing-nginx-plugin">Installing NGINX plugin</a></li>
+        <li><a href="#installing-and-setting-up-cloudflare-plugin">Installing and setting up cloudflare plugin</a></li>
+        <li><a href="#generate-an-api-token-for-cloudflare">Generate an API token for CloudFlare</a></li>
+        <li><a href="#store-the-cloudflare-api-token-on-the-server">Store the CloudFlare API token on the server</a></li>
+        <li><a href="#request-your-certificate-with-certbot">Request your certificate with certbot</a></li>
+        <li><a href="#telling-certbot-to-add-the-certificates-to-the-nginx-config-file-of-your-site">Telling CERTBOT to add the certificates to the nginx config file of your site.</a></li>
+      </ol>
+    </li>
+    <li><a href="#setting-up-cloudflare-tunnel">Setting up Cloudflare Tunnel</a>
+      <ol>
+        <li><a href="#install-the-cloudflared-service">Install the Cloudflared service:</a></li>
+        <li><a href="#authenticate-cloudflared">Authenticate cloudflared</a></li>
+        <li><a href="#creating-the-tunnel">Creating the tunnel</a></li>
+        <li><a href="#route-the-traffic">Route the traffic</a></li>
+        <li><a href="#run-the-tunnel">Run the tunnel</a></li>
+      </ol>
+    </li>
+    <li><a href="#running-ghost">Running GHOST</a>
+      <ol>
+        <li><a href="#known-issues">Known issues</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

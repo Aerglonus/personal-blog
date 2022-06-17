@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Sample article to teach you how to split OBS audio sources.'><title>OBS Split Audio Guide</title>
+
+<link rel='canonical' href='/p/obs-split-audio-guide/'>
+
+<link rel="stylesheet" href="/scss/style.min.d03848af3395ea635c77881e6e10ae46e11d5b897ed2ec25484bc1c030c8b667.css"><meta property='og:title' content='OBS Split Audio Guide'>
+<meta property='og:description' content='Sample article to teach you how to split OBS audio sources.'>
+<meta property='og:url' content='/p/obs-split-audio-guide/'>
+<meta property='og:site_name' content='Lonus'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='css' /><meta property='article:tag' content='html' /><meta property='article:tag' content='themes' /><meta property='article:published_time' content='2022-06-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-06-11T00:00:00&#43;00:00'/><meta property='og:image' content='/p/obs-split-audio-guide/obs-studio.jpeg' />
+<meta name="twitter:site" content="@aerglonus">
+    <meta name="twitter:creator" content="@aerglonus"><meta name="twitter:title" content="OBS Split Audio Guide">
+<meta name="twitter:description" content="Sample article to teach you how to split OBS audio sources."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='/p/obs-split-audio-guide/obs-studio.jpeg' />
+<link rel="shortcut icon" href="/favicon.png" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YMDYGPZL6S"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-YMDYGPZL6S', { 'anonymize_ip': false });
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7891761786816782"
+  crossorigin="anonymous"></script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar200_hua5cabf616482f17f7f951066ed6e9d94_9155_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Lonus</a></h1>
+            <h2 class="site-description">Just dumping everything I learn.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/aerglonus'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitch.tv/aerglonus'
+                        target="_blank"
+                        title="Twitch"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitch" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <desc>Download more icon variants from https://tabler-icons.io/i/brand-twitch</desc>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />
+  <line x1="16" y1="8" x2="16" y2="12" />
+  <line x1="12" y1="8" x2="12" y2="12" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/aerglonus'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="/" selected>English</option>
+                        
+                            <option value="/ko/" >한국어</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/obs-split-audio-guide/">
+                <img src="/p/obs-split-audio-guide/obs-studio_hu852487be308eca7c1a54a1172628f88e_105789_800x0_resize_q75_box.jpeg"
+                        srcset="/p/obs-split-audio-guide/obs-studio_hu852487be308eca7c1a54a1172628f88e_105789_800x0_resize_q75_box.jpeg 800w, /p/obs-split-audio-guide/obs-studio_hu852487be308eca7c1a54a1172628f88e_105789_1600x0_resize_q75_box.jpeg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post OBS Split Audio Guide" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/guide/" >
+                Guide
+            </a>
+        
+            <a href="/categories/streaming/" >
+                Streaming
+            </a>
+        
+            <a href="/categories/obs/" >
+                OBS
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/obs-split-audio-guide/">OBS Split Audio Guide</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Sample article to teach you how to split OBS audio sources.
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 11, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="/ko/p/obs-split-audio-guide/" class="link">한국어</a>
+                
+            </div>
+        </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="what-you-need"><strong>What you need:</strong></h2>
+<p>1 - OBS studio</p>
+<p>2 - win-capture-audio, this is the program you need to split the audio. You can download it here :</p>
+<blockquote>
+<p><a class="link" href="https://github.com/bozbez/win-capture-audio/releases/download/v2.2.2-beta/win-capture-audio-2.2.2-beta-setup.exe"  target="_blank" rel="noopener"
+    >https://github.com/bozbez/win-capture-audio/releases/download/v2.2.2-beta/win-capture-audio-2.2.2-beta-setup.exe</a></p>
+</blockquote>
+<h2 id="installation-and-usage">Installation and Usage</h2>
+<p>Once you downloaded the program run the installer (make sure OBS is not open) it&rsquo;s a fast installation once it finish you can launch OBS now if you add a new source there should be a new option called <code>Application Audio Output Capture</code></p>
+<p><img src="/p/obs-split-audio-guide/image1.png"
+	width="459"
+	height="361"
+	srcset="/p/obs-split-audio-guide/image1_hu9ffb34005aabd20126d4a4472a1323ba_19594_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image1_hu9ffb34005aabd20126d4a4472a1323ba_19594_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 1 "
+	
+	
+		class="gallery-image" 
+		data-flex-grow="127"
+		data-flex-basis="305px"
+	
+></p>
+<h2 id="adding-the-audio-sources">Adding the audio sources:</h2>
+<blockquote>
+<p>Since you can add multiple programs to the same source I recommend creating a source specially for each type of group for example did it like this:</p>
+<p><img src="/p/obs-split-audio-guide/image2.png"
+	width="391"
+	height="64"
+	srcset="/p/obs-split-audio-guide/image2_huf3ae6b003c27ff49d290ae0dd35f39a0_3031_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image2_huf3ae6b003c27ff49d290ae0dd35f39a0_3031_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image 2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="610"
+		data-flex-basis="1466px"
+	
+></p>
+<p>The <code>Music - Audio</code> group it&rsquo;s a must since here is where you&rsquo;re going to add the programs that bring music to the stream like <strong>Spotify</strong> or <strong>Google chrome(nightbot/youtube)</strong> and its gonna allow to separate it from the VOD audio track.</p>
+<p>Also to avoid having to add each audio source to different scenes a good trick is creating a new scene and there add all the audio sources groups you&rsquo;re gonna use and once you are done with setting up everything all you have to do is add that scene as a source in the multiple scenes that you use so every time you add a new group of audio sources it automatically adds them to the mixer of each scene.</p>
+</blockquote>
+<p><img src="/p/obs-split-audio-guide/image3.png"
+	width="789"
+	height="391"
+	srcset="/p/obs-split-audio-guide/image3_hub1c2d9378c425ad6ca4960d0f4ae8131_13240_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image3_hub1c2d9378c425ad6ca4960d0f4ae8131_13240_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Scene exclusively to audio sources:"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="201"
+		data-flex-basis="484px"
+	
+></p>
+<p><img src="/p/obs-split-audio-guide/image4.png"
+	width="791"
+	height="392"
+	srcset="/p/obs-split-audio-guide/image4_hu1ee4fb4b48fde016db86cf8494890e38_27524_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image4_hu1ee4fb4b48fde016db86cf8494890e38_27524_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="currently in Gaming scene with the Audio scene as a source:"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="201"
+		data-flex-basis="484px"
+	
+></p>
+<h3 id="add-your-programs"><strong>Add your programs:</strong></h3>
+<p>Here you have to ways to add programs/games.</p>
+<ol>
+<li>
+<p><strong>Add from currently active sessions menu</strong>: In this menu it should give you a list with the most common program. (ex: Discord, Spotify) and some others that the plugin might detect. Once you selected the program just click in the <code>Add Executable</code>. You can add multiple programs as a group to the same audio source.</p>
+<p><img src="/p/obs-split-audio-guide/image5.png"
+	width="722"
+	height="612"
+	srcset="/p/obs-split-audio-guide/image5_hu55ae41cbdc8431eb5ea5d6c34f85c1f0_17686_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image5_hu55ae41cbdc8431eb5ea5d6c34f85c1f0_17686_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="117"
+		data-flex-basis="283px"
+	
+></p>
+</li>
+<li>
+<p><strong>Using the <code>+</code> next to the executables area:</strong> If the program you want to add to a certain group of sources doesn&rsquo;t show up in the <code>Session</code> menu you might wanna added the program executable manually. For example if you want to add <strong>Google Chrome</strong> and it doesn&rsquo;t show up in the list you add it by clicking in the <code>+</code> button and type <code>chrome.exe</code> and press <strong>ok</strong> and it should be added to the <strong>Executables</strong> area.</p>
+<p><img src="/p/obs-split-audio-guide/image6.png"
+	width="722"
+	height="612"
+	srcset="/p/obs-split-audio-guide/image6_hu007f60a4768f6e25a53127fa6f3afc6b_23688_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image6_hu007f60a4768f6e25a53127fa6f3afc6b_23688_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="117"
+		data-flex-basis="283px"
+	
+></p>
+</li>
+</ol>
+<blockquote>
+<p><strong>IMPORTANT !! : SINCE OBS IS CREATING AUDIO TOO BECAUSE YOU HAVE CLIPS/ALERTS AND SUCH THINGS AS BROWSER SOURCE INSIDE OBS YOU SHOULD ADD OBS ITSELF AS AN AUDIO SOURCE SO VIEWERS GET TO HEAR THEM ON STREAM</strong></p>
+</blockquote>
+<p>If the program you want to add doesn&rsquo;t show up in the <strong>Session</strong> menu and you have to manually add it but you dont know whats the name of the executable you can get it in the <code>task manager</code> in the <code>details</code> tab. (<code>Open it by pressing Windows key + type taksmngr</code> and it should be the first option) there you can see all the programs executable names. (ex: <code>chrome.exe</code>). Most of the time the executable is <code>programname.exe</code> but sometimes its different.(ex: for Apex Legends is <code>r5apex.exe</code>).</p>
+<p><strong>NOTE - League of Legends:</strong></p>
+<p>For league you have to add two sources <code>LeagueClientUxRender.exe</code> and <code>League of Legends.exe</code> the first one is for the <strong>league client</strong> audio and the second one is for when youre inside the game audio. Both should automatically appear in the session menu when you open the client and when you get in a game. (you can set up the second by going into a custom game/practice tool).</p>
+<h2 id="telling-twitch-which-applications-audio-you-want-to-get-saved-in-the-vod-audio"><strong>Telling Twitch which applications audio you want to get saved in the VOD audio:</strong></h2>
+<p>Inside OBS settings you want to change the <code>Output mode</code> from <strong>simple</strong> to <strong>advanced</strong> once you do this you should see the <code>Twitch VOD Track</code> option under the <code>Audio Track</code> select the checkbox and by default it has the track <code>2</code> you can leave it as it is or change it, up to you. Just keep in mind that it should not be the same as the <code>Audio Track</code>.</p>
+<p><img src="/p/obs-split-audio-guide/image7.png"
+	width="983"
+	height="758"
+	srcset="/p/obs-split-audio-guide/image7_hu4ddd70b6cae4dcbd5cded0aea2e91f65_39581_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image7_hu4ddd70b6cae4dcbd5cded0aea2e91f65_39581_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="129"
+		data-flex-basis="311px"
+	
+></p>
+<h2 id="disabling-audio-track-">Disabling audio track :</h2>
+<p>Once you have the option enabled and all your audio sources added the next step disabling the track <code>2</code> to the sources that you don&rsquo;t want to be saved in the VOD.</p>
+<blockquote>
+<p>Remember the <code>Music - Audio</code> source we created before here it&rsquo;s why we need it to be like that.</p>
+</blockquote>
+<p>For this you click in the cog wheel of any audio source and go to <code>Advanced Audio Properties</code>.</p>
+<p><img src="/p/obs-split-audio-guide/image8.png"
+	width="324"
+	height="399"
+	srcset="/p/obs-split-audio-guide/image8_hucf5a3dcc339646b31f145536220f25a1_12819_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image8_hucf5a3dcc339646b31f145536220f25a1_12819_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="81"
+		data-flex-basis="194px"
+	
+></p>
+<p>Then a new window should pop-up and it should show you all the audio sources and their <code>audio tracks</code></p>
+<p><img src="/p/obs-split-audio-guide/image9.png"
+	width="1102"
+	height="372"
+	srcset="/p/obs-split-audio-guide/image9_hu91299b08cf1f9234921188f17a53d789_28416_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image9_hu91299b08cf1f9234921188f17a53d789_28416_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="296"
+		data-flex-basis="710px"
+	
+></p>
+<p>See how we have multiple numbers and check boxes in <code>Tracks</code>. Remember that by default <code>Twitch VOD Track</code> that is selected in Settings is the track <code>2</code>, since we don&rsquo;t want Twitch to save our<code>Music - Audio</code> in the VOD what we do is we uncheck the track <code>2</code> from <code>Music - Audio</code> or any other audio source you want to exclude from the VOD.</p>
+<p><img src="/p/obs-split-audio-guide/image10.png"
+	width="1102"
+	height="372"
+	srcset="/p/obs-split-audio-guide/image10_huc12bd4d2bb6c8a04536b62e75df21a15_28817_480x0_resize_box_3.png 480w, /p/obs-split-audio-guide/image10_huc12bd4d2bb6c8a04536b62e75df21a15_28817_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="296"
+		data-flex-basis="710px"
+	
+></p>
+<blockquote>
+<p>Note: Only uncheck the track that you selected as your twitch vod track because if you uncheck any other track not only it wont get recorded in the VOD, viewers won&rsquo;t be able to listen to that source on stream.</p>
+</blockquote>
+<p>Now from now on your vods should not record any music source.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/markdown/">markdown</a>
+        
+            <a href="/tags/css/">css</a>
+        
+            <a href="/tags/html/">html</a>
+        
+            <a href="/tags/themes/">themes</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/markdown-syntax-guide/">
+        
+        
+            <div class="article-image">
+                <img src="/p/markdown-syntax-guide/_hud7e36f7e20e71be184458283bdae4646_55974_23a5d351d2fc2374f952239b6e9c423a.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Markdown Syntax Guide"
+                        
+                        data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown Syntax Guide</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/">
+        
+        
+            <div class="article-image">
+                <img src="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost.e0de707be2675882e645eb7f6719594f_hu7136eeb6509210a4b2b53073df7006c6_75676_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How to install &amp; host Ghost with Cloudflare Argo tunnel"
+                        
+                        data-hash="md5-4N5we&#43;JnWILmRet/ZxlZTw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to install &amp; host Ghost with Cloudflare Argo tunnel</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" repo="aerglonus/blog-comments"
+    issue-term="pathname" 
+    theme="dark-blue" label="Comment"  crossorigin="anonymous" async>
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme() {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage({
+                    type: 'set-theme',
+                    theme: theme
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+        2021 -
+        
+        2022 Lonus
+    </section>
+
+    
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-you-need"><strong>What you need:</strong></a></li>
+    <li><a href="#installation-and-usage">Installation and Usage</a></li>
+    <li><a href="#adding-the-audio-sources">Adding the audio sources:</a>
+      <ol>
+        <li><a href="#add-your-programs"><strong>Add your programs:</strong></a></li>
+      </ol>
+    </li>
+    <li><a href="#telling-twitch-which-applications-audio-you-want-to-get-saved-in-the-vod-audio"><strong>Telling Twitch which applications audio you want to get saved in the VOD audio:</strong></a></li>
+    <li><a href="#disabling-audio-track-">Disabling audio track :</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
