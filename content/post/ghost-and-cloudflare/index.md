@@ -434,9 +434,10 @@ If you check your site`conf` file the certificates should be applied and all the
 
 > For more information on how to renew the type `certbot --help` or type `sudo certbot renew` this wil renew all your certificates so if you have multiple certificates for different domains and you want to renew a specific one run `certbot certonly --force-renew -d yourdomain.com`.
 
-
 ## Setting up Cloudflare Tunnel
+
 ---
+
 ### Install the Cloudflared service:
 
 **NOTE**
