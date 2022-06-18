@@ -2,352 +2,352 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://aerland.xyz/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/"
+                href="https://aerland.xyz/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://aerland.xyz/"
                 />
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://aerland.xyz/categories/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/categories/"
+                href="https://aerland.xyz/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="https://aerland.xyz/categories/"
                 />
   </url><url>
-    <loc>/categories/cloudflare/</loc>
+    <loc>https://aerland.xyz/categories/cloudflare/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/categories/cloudflare/"
+                href="https://aerland.xyz/ko/categories/cloudflare/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/cloudflare/"
+                href="https://aerland.xyz/categories/cloudflare/"
                 />
   </url><url>
-    <loc>/tags/cms/</loc>
+    <loc>https://aerland.xyz/tags/cms/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/cms/"
+                href="https://aerland.xyz/ko/tags/cms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/cms/"
+                href="https://aerland.xyz/tags/cms/"
                 />
   </url><url>
-    <loc>/categories/ghost/</loc>
+    <loc>https://aerland.xyz/categories/ghost/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/categories/ghost/"
+                href="https://aerland.xyz/ko/categories/ghost/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/ghost/"
+                href="https://aerland.xyz/categories/ghost/"
                 />
   </url><url>
-    <loc>/tags/guide/</loc>
+    <loc>https://aerland.xyz/tags/guide/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/guide/"
+                href="https://aerland.xyz/ko/tags/guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/guide/"
+                href="https://aerland.xyz/tags/guide/"
                 />
   </url><url>
-    <loc>/categories/guide/</loc>
+    <loc>https://aerland.xyz/categories/guide/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/categories/guide/"
+                href="https://aerland.xyz/ko/categories/guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/guide/"
+                href="https://aerland.xyz/categories/guide/"
                 />
   </url><url>
-    <loc>/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</loc>
+    <loc>https://aerland.xyz/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
+                href="https://aerland.xyz/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
+                href="https://aerland.xyz/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
                 />
   </url><url>
-    <loc>/tags/linux/</loc>
+    <loc>https://aerland.xyz/tags/linux/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/linux/"
+                href="https://aerland.xyz/ko/tags/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/linux/"
+                href="https://aerland.xyz/tags/linux/"
                 />
   </url><url>
-    <loc>/categories/linux/</loc>
+    <loc>https://aerland.xyz/categories/linux/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/categories/linux/"
+                href="https://aerland.xyz/ko/categories/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/linux/"
+                href="https://aerland.xyz/categories/linux/"
                 />
   </url><url>
-    <loc>/post/</loc>
+    <loc>https://aerland.xyz/post/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/post/"
+                href="https://aerland.xyz/ko/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/post/"
+                href="https://aerland.xyz/post/"
                 />
   </url><url>
-    <loc>/categories/sefl-hosting/</loc>
+    <loc>https://aerland.xyz/categories/sefl-hosting/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/categories/sefl-hosting/"
+                href="https://aerland.xyz/ko/categories/sefl-hosting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/sefl-hosting/"
+                href="https://aerland.xyz/categories/sefl-hosting/"
                 />
   </url><url>
-    <loc>/tags/self-hosted/</loc>
+    <loc>https://aerland.xyz/tags/self-hosted/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/self-hosted/"
+                href="https://aerland.xyz/ko/tags/self-hosted/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/self-hosted/"
+                href="https://aerland.xyz/tags/self-hosted/"
                 />
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://aerland.xyz/tags/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/"
+                href="https://aerland.xyz/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="https://aerland.xyz/tags/"
                 />
   </url><url>
-    <loc>/tags/css/</loc>
+    <loc>https://aerland.xyz/tags/css/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/css/"
+                href="https://aerland.xyz/ko/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/css/"
+                href="https://aerland.xyz/tags/css/"
                 />
   </url><url>
-    <loc>/tags/html/</loc>
+    <loc>https://aerland.xyz/tags/html/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/html/"
+                href="https://aerland.xyz/ko/tags/html/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/html/"
+                href="https://aerland.xyz/tags/html/"
                 />
   </url><url>
-    <loc>/tags/markdown/</loc>
+    <loc>https://aerland.xyz/tags/markdown/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/markdown/"
+                href="https://aerland.xyz/ko/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/markdown/"
+                href="https://aerland.xyz/tags/markdown/"
                 />
   </url><url>
-    <loc>/categories/obs/</loc>
+    <loc>https://aerland.xyz/categories/obs/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/categories/obs/"
+                href="https://aerland.xyz/ko/categories/obs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/obs/"
+                href="https://aerland.xyz/categories/obs/"
                 />
   </url><url>
-    <loc>/p/obs-split-audio-guide/</loc>
+    <loc>https://aerland.xyz/p/obs-split-audio-guide/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/p/obs-split-audio-guide/"
+                href="https://aerland.xyz/ko/p/obs-split-audio-guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/p/obs-split-audio-guide/"
+                href="https://aerland.xyz/p/obs-split-audio-guide/"
                 />
   </url><url>
-    <loc>/categories/streaming/</loc>
+    <loc>https://aerland.xyz/categories/streaming/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/categories/streaming/"
+                href="https://aerland.xyz/ko/categories/streaming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/streaming/"
+                href="https://aerland.xyz/categories/streaming/"
                 />
   </url><url>
-    <loc>/tags/themes/</loc>
+    <loc>https://aerland.xyz/tags/themes/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/tags/themes/"
+                href="https://aerland.xyz/ko/tags/themes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/themes/"
+                href="https://aerland.xyz/tags/themes/"
                 />
   </url><url>
-    <loc>/p/markdown-syntax-guide/</loc>
+    <loc>https://aerland.xyz/p/markdown-syntax-guide/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/syntax/</loc>
+    <loc>https://aerland.xyz/categories/syntax/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/test/</loc>
+    <loc>https://aerland.xyz/categories/test/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/themes/</loc>
+    <loc>https://aerland.xyz/categories/themes/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/archives/</loc>
+    <loc>https://aerland.xyz/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/archives/"
+                href="https://aerland.xyz/ko/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/archives/"
+                href="https://aerland.xyz/archives/"
                 />
   </url><url>
-    <loc>/page/</loc>
+    <loc>https://aerland.xyz/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/page/"
+                href="https://aerland.xyz/ko/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/page/"
+                href="https://aerland.xyz/page/"
                 />
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://aerland.xyz/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/about/"
+                href="https://aerland.xyz/ko/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/about/"
+                href="https://aerland.xyz/about/"
                 />
   </url><url>
-    <loc>/links/</loc>
+    <loc>https://aerland.xyz/links/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/links/"
+                href="https://aerland.xyz/ko/links/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/links/"
+                href="https://aerland.xyz/links/"
                 />
   </url><url>
-    <loc>/search/</loc>
+    <loc>https://aerland.xyz/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/ko/search/"
+                href="https://aerland.xyz/ko/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/search/"
+                href="https://aerland.xyz/search/"
                 />
   </url>
 </urlset>

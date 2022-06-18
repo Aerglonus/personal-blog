@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Lonus</title>
-        <link>/tags/</link>
+        <link>https://aerland.xyz/tags/</link>
         <description>Recent content in Tags on Lonus</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aerland.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>cms</title>
-        <link>/tags/cms/</link>
+        <link>https://aerland.xyz/tags/cms/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/cms/</guid>
+        <guid>https://aerland.xyz/tags/cms/</guid>
         <description></description>
         </item>
         <item>
         <title>guide</title>
-        <link>/tags/guide/</link>
+        <link>https://aerland.xyz/tags/guide/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/guide/</guid>
+        <guid>https://aerland.xyz/tags/guide/</guid>
         <description></description>
         </item>
         <item>
         <title>linux</title>
-        <link>/tags/linux/</link>
+        <link>https://aerland.xyz/tags/linux/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/linux/</guid>
+        <guid>https://aerland.xyz/tags/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>self-hosted</title>
-        <link>/tags/self-hosted/</link>
+        <link>https://aerland.xyz/tags/self-hosted/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/self-hosted/</guid>
+        <guid>https://aerland.xyz/tags/self-hosted/</guid>
         <description></description>
         </item>
         <item>
         <title>css</title>
-        <link>/tags/css/</link>
+        <link>https://aerland.xyz/tags/css/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/css/</guid>
+        <guid>https://aerland.xyz/tags/css/</guid>
         <description></description>
         </item>
         <item>
         <title>html</title>
-        <link>/tags/html/</link>
+        <link>https://aerland.xyz/tags/html/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/html/</guid>
+        <guid>https://aerland.xyz/tags/html/</guid>
         <description></description>
         </item>
         <item>
         <title>markdown</title>
-        <link>/tags/markdown/</link>
+        <link>https://aerland.xyz/tags/markdown/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/markdown/</guid>
+        <guid>https://aerland.xyz/tags/markdown/</guid>
         <description></description>
         </item>
         <item>
         <title>themes</title>
-        <link>/tags/themes/</link>
+        <link>https://aerland.xyz/tags/themes/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/themes/</guid>
+        <guid>https://aerland.xyz/tags/themes/</guid>
         <description></description>
         </item>
         
