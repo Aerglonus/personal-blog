@@ -3,3 +3,4 @@ Sitemap: https://aerland.xyz/sitemap.xml
 Allow: /p/
 Disallow: /tags/
 Disallow: /categories/
+Allow: /img/
