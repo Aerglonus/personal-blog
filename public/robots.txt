@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://aerland.xyz/sitemap.xml
+Disallow: /tags/
+Disallow: /categories/

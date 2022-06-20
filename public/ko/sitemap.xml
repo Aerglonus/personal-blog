@@ -4,6 +4,8 @@
   <url>
     <loc>https://aerland.xyz/ko/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -17,6 +19,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/categories/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,6 +34,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/categories/cloudflare/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -43,6 +49,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/cms/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -56,6 +64,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/categories/ghost/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -69,6 +79,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/guide/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -82,6 +94,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/categories/guide/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -95,6 +109,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -108,6 +124,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/linux/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -121,6 +139,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/categories/linux/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -134,6 +154,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/post/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -147,6 +169,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/categories/sefl-hosting/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -160,6 +184,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/self-hosted/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -173,6 +199,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -186,6 +214,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/css/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -199,6 +229,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/html/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -212,6 +244,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/markdown/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -225,6 +259,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/categories/obs/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -238,6 +274,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/p/obs-split-audio-guide/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -251,6 +289,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/categories/streaming/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -264,6 +304,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/tags/themes/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -277,6 +319,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -290,6 +334,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -303,6 +349,8 @@
   </url><url>
     <loc>https://aerland.xyz/ko/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -315,6 +363,8 @@
                 />
   </url><url>
     <loc>https://aerland.xyz/ko/links/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -327,6 +377,8 @@
                 />
   </url><url>
     <loc>https://aerland.xyz/ko/search/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
