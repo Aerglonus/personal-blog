@@ -16,7 +16,7 @@ languages:
 disqusShortname: NotLonus
 
 # GA Tracking ID
-googleAnalytics: G-YMDYGPZL6S
+googleAnalytics: 
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
