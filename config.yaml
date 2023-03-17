@@ -2,7 +2,7 @@ languageCode: en-us
 paginate: 5
 theme: stack
 title: Lonus Blog
-baseURL: https://aerland.xyz
+baseURL: https://hugo.lonusu.com
 languages:
     en:
         languageName: English
@@ -16,7 +16,7 @@ languages:
 disqusShortname: NotLonus
 
 # GA Tracking ID
-googleAnalytics: 
+googleAnalytics:
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
@@ -39,7 +39,7 @@ params:
 
     footer:
         since: 2021
-        customText: 
+        customText:
 
     dateFormat:
         published: Jan 02, 2006
@@ -66,7 +66,7 @@ params:
         provider: utterances
 
         disqusjs:
-            shortname: NotLonus 
+            shortname: NotLonus
             apiUrl:
             apiKey:
             admin:
@@ -203,7 +203,7 @@ menu:
           name: Twitch
           url: https://twitch.tv/aerglonus
           params:
-            icon: brand-twitch
+              icon: brand-twitch
 
 related:
     includeNewer: true
@@ -234,12 +234,12 @@ markup:
         lineNumbersInTable: true
         tabWidth: 4
 # module:
-  # uncomment line below for temporary local development of module
-  # replacements: "github.com/CaiJimmy/hugo-theme-stack/v3 -> ../../hugo-theme-stack"
-  #imports:
-   # - path: github.com/CaiJimmy/hugo-theme-stack/v3
-    #  disable: false
+# uncomment line below for temporary local development of module
+# replacements: "github.com/CaiJimmy/hugo-theme-stack/v3 -> ../../hugo-theme-stack"
+#imports:
+# - path: github.com/CaiJimmy/hugo-theme-stack/v3
+#  disable: false
 sitemap:
-  changefreq: monthly
-  filename: sitemap.xml
-  priority: 0.5
+    changefreq: monthly
+    filename: sitemap.xml
+    priority: 0.5

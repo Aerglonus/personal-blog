@@ -2,412 +2,412 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://aerland.xyz/</loc>
+    <loc>https://hugo.lonusu.com/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/"
+                href="https://hugo.lonusu.com/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/"
+                href="https://hugo.lonusu.com/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/categories/</loc>
+    <loc>https://hugo.lonusu.com/categories/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/categories/"
+                href="https://hugo.lonusu.com/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/categories/"
+                href="https://hugo.lonusu.com/categories/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/categories/cloudflare/</loc>
+    <loc>https://hugo.lonusu.com/categories/cloudflare/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/categories/cloudflare/"
+                href="https://hugo.lonusu.com/ko/categories/cloudflare/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/categories/cloudflare/"
+                href="https://hugo.lonusu.com/categories/cloudflare/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/cms/</loc>
+    <loc>https://hugo.lonusu.com/tags/cms/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/cms/"
+                href="https://hugo.lonusu.com/ko/tags/cms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/cms/"
+                href="https://hugo.lonusu.com/tags/cms/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/categories/ghost/</loc>
+    <loc>https://hugo.lonusu.com/categories/ghost/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/categories/ghost/"
+                href="https://hugo.lonusu.com/ko/categories/ghost/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/categories/ghost/"
+                href="https://hugo.lonusu.com/categories/ghost/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/guide/</loc>
+    <loc>https://hugo.lonusu.com/tags/guide/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/guide/"
+                href="https://hugo.lonusu.com/ko/tags/guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/guide/"
+                href="https://hugo.lonusu.com/tags/guide/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/categories/guide/</loc>
+    <loc>https://hugo.lonusu.com/categories/guide/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/categories/guide/"
+                href="https://hugo.lonusu.com/ko/categories/guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/categories/guide/"
+                href="https://hugo.lonusu.com/categories/guide/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</loc>
+    <loc>https://hugo.lonusu.com/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
+                href="https://hugo.lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
+                href="https://hugo.lonusu.com/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/linux/</loc>
+    <loc>https://hugo.lonusu.com/tags/linux/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/linux/"
+                href="https://hugo.lonusu.com/ko/tags/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/linux/"
+                href="https://hugo.lonusu.com/tags/linux/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/categories/linux/</loc>
+    <loc>https://hugo.lonusu.com/categories/linux/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/categories/linux/"
+                href="https://hugo.lonusu.com/ko/categories/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/categories/linux/"
+                href="https://hugo.lonusu.com/categories/linux/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/post/</loc>
+    <loc>https://hugo.lonusu.com/post/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/post/"
+                href="https://hugo.lonusu.com/ko/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/post/"
+                href="https://hugo.lonusu.com/post/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/categories/sefl-hosting/</loc>
+    <loc>https://hugo.lonusu.com/categories/sefl-hosting/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/categories/sefl-hosting/"
+                href="https://hugo.lonusu.com/ko/categories/sefl-hosting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/categories/sefl-hosting/"
+                href="https://hugo.lonusu.com/categories/sefl-hosting/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/self-hosted/</loc>
+    <loc>https://hugo.lonusu.com/tags/self-hosted/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/self-hosted/"
+                href="https://hugo.lonusu.com/ko/tags/self-hosted/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/self-hosted/"
+                href="https://hugo.lonusu.com/tags/self-hosted/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/</loc>
+    <loc>https://hugo.lonusu.com/tags/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/"
+                href="https://hugo.lonusu.com/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/"
+                href="https://hugo.lonusu.com/tags/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/css/</loc>
+    <loc>https://hugo.lonusu.com/tags/css/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/css/"
+                href="https://hugo.lonusu.com/ko/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/css/"
+                href="https://hugo.lonusu.com/tags/css/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/html/</loc>
+    <loc>https://hugo.lonusu.com/tags/html/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/html/"
+                href="https://hugo.lonusu.com/ko/tags/html/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/html/"
+                href="https://hugo.lonusu.com/tags/html/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/markdown/</loc>
+    <loc>https://hugo.lonusu.com/tags/markdown/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/markdown/"
+                href="https://hugo.lonusu.com/ko/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/markdown/"
+                href="https://hugo.lonusu.com/tags/markdown/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/categories/obs/</loc>
+    <loc>https://hugo.lonusu.com/categories/obs/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/categories/obs/"
+                href="https://hugo.lonusu.com/ko/categories/obs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/categories/obs/"
+                href="https://hugo.lonusu.com/categories/obs/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/p/obs-split-audio-guide/</loc>
+    <loc>https://hugo.lonusu.com/p/obs-split-audio-guide/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/p/obs-split-audio-guide/"
+                href="https://hugo.lonusu.com/ko/p/obs-split-audio-guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/p/obs-split-audio-guide/"
+                href="https://hugo.lonusu.com/p/obs-split-audio-guide/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/categories/streaming/</loc>
+    <loc>https://hugo.lonusu.com/categories/streaming/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/categories/streaming/"
+                href="https://hugo.lonusu.com/ko/categories/streaming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/categories/streaming/"
+                href="https://hugo.lonusu.com/categories/streaming/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/tags/themes/</loc>
+    <loc>https://hugo.lonusu.com/tags/themes/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/tags/themes/"
+                href="https://hugo.lonusu.com/ko/tags/themes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/tags/themes/"
+                href="https://hugo.lonusu.com/tags/themes/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/p/markdown-syntax-guide/</loc>
+    <loc>https://hugo.lonusu.com/p/markdown-syntax-guide/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://aerland.xyz/categories/syntax/</loc>
+    <loc>https://hugo.lonusu.com/categories/syntax/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://aerland.xyz/categories/test/</loc>
+    <loc>https://hugo.lonusu.com/categories/test/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://aerland.xyz/categories/themes/</loc>
+    <loc>https://hugo.lonusu.com/categories/themes/</loc>
     <lastmod>2022-03-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://aerland.xyz/archives/</loc>
+    <loc>https://hugo.lonusu.com/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/archives/"
+                href="https://hugo.lonusu.com/ko/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/archives/"
+                href="https://hugo.lonusu.com/archives/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/page/</loc>
+    <loc>https://hugo.lonusu.com/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/page/"
+                href="https://hugo.lonusu.com/ko/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/page/"
+                href="https://hugo.lonusu.com/page/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/about/</loc>
+    <loc>https://hugo.lonusu.com/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/about/"
+                href="https://hugo.lonusu.com/ko/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/about/"
+                href="https://hugo.lonusu.com/about/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/links/</loc>
+    <loc>https://hugo.lonusu.com/links/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/links/"
+                href="https://hugo.lonusu.com/ko/links/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/links/"
+                href="https://hugo.lonusu.com/links/"
                 />
   </url><url>
-    <loc>https://aerland.xyz/search/</loc>
+    <loc>https://hugo.lonusu.com/search/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://aerland.xyz/ko/search/"
+                href="https://hugo.lonusu.com/ko/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aerland.xyz/search/"
+                href="https://hugo.lonusu.com/search/"
                 />
   </url>
 </urlset>

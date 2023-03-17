@@ -2,88 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Lonus</title>
-        <link>https://aerland.xyz/categories/</link>
+        <link>https://hugo.lonusu.com/categories/</link>
         <description>Recent content in Categories on Lonus</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aerland.xyz/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.lonusu.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Cloudflare</title>
-        <link>https://aerland.xyz/categories/cloudflare/</link>
+        <link>https://hugo.lonusu.com/categories/cloudflare/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/cloudflare/</guid>
+        <guid>https://hugo.lonusu.com/categories/cloudflare/</guid>
         <description></description>
         </item>
         <item>
         <title>Ghost</title>
-        <link>https://aerland.xyz/categories/ghost/</link>
+        <link>https://hugo.lonusu.com/categories/ghost/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/ghost/</guid>
+        <guid>https://hugo.lonusu.com/categories/ghost/</guid>
         <description></description>
         </item>
         <item>
         <title>Guide</title>
-        <link>https://aerland.xyz/categories/guide/</link>
+        <link>https://hugo.lonusu.com/categories/guide/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/guide/</guid>
+        <guid>https://hugo.lonusu.com/categories/guide/</guid>
         <description></description>
         </item>
         <item>
         <title>Linux</title>
-        <link>https://aerland.xyz/categories/linux/</link>
+        <link>https://hugo.lonusu.com/categories/linux/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/linux/</guid>
+        <guid>https://hugo.lonusu.com/categories/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>Sefl-hosting</title>
-        <link>https://aerland.xyz/categories/sefl-hosting/</link>
+        <link>https://hugo.lonusu.com/categories/sefl-hosting/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/sefl-hosting/</guid>
+        <guid>https://hugo.lonusu.com/categories/sefl-hosting/</guid>
         <description></description>
         </item>
         <item>
         <title>OBS</title>
-        <link>https://aerland.xyz/categories/obs/</link>
+        <link>https://hugo.lonusu.com/categories/obs/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/obs/</guid>
+        <guid>https://hugo.lonusu.com/categories/obs/</guid>
         <description></description>
         </item>
         <item>
         <title>Streaming</title>
-        <link>https://aerland.xyz/categories/streaming/</link>
+        <link>https://hugo.lonusu.com/categories/streaming/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/streaming/</guid>
+        <guid>https://hugo.lonusu.com/categories/streaming/</guid>
         <description></description>
         </item>
         <item>
         <title>syntax</title>
-        <link>https://aerland.xyz/categories/syntax/</link>
+        <link>https://hugo.lonusu.com/categories/syntax/</link>
         <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/syntax/</guid>
+        <guid>https://hugo.lonusu.com/categories/syntax/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>https://aerland.xyz/categories/test/</link>
+        <link>https://hugo.lonusu.com/categories/test/</link>
         <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/test/</guid>
-        <description>&lt;img src="https://aerland.xyz/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://hugo.lonusu.com/categories/test/</guid>
+        <description>&lt;img src="https://hugo.lonusu.com/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         <item>
         <title>themes</title>
-        <link>https://aerland.xyz/categories/themes/</link>
+        <link>https://hugo.lonusu.com/categories/themes/</link>
         <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/categories/themes/</guid>
+        <guid>https://hugo.lonusu.com/categories/themes/</guid>
         <description></description>
         </item>
         
