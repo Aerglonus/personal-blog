@@ -2,72 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Lonus</title>
-        <link>https://aerland.xyz/tags/</link>
+        <link>https://hugo.lonusu.com/tags/</link>
         <description>Recent content in Tags on Lonus</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aerland.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.lonusu.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>cms</title>
-        <link>https://aerland.xyz/tags/cms/</link>
+        <link>https://hugo.lonusu.com/tags/cms/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/tags/cms/</guid>
+        <guid>https://hugo.lonusu.com/tags/cms/</guid>
         <description></description>
         </item>
         <item>
         <title>guide</title>
-        <link>https://aerland.xyz/tags/guide/</link>
+        <link>https://hugo.lonusu.com/tags/guide/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/tags/guide/</guid>
+        <guid>https://hugo.lonusu.com/tags/guide/</guid>
         <description></description>
         </item>
         <item>
         <title>linux</title>
-        <link>https://aerland.xyz/tags/linux/</link>
+        <link>https://hugo.lonusu.com/tags/linux/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/tags/linux/</guid>
+        <guid>https://hugo.lonusu.com/tags/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>self-hosted</title>
-        <link>https://aerland.xyz/tags/self-hosted/</link>
+        <link>https://hugo.lonusu.com/tags/self-hosted/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/tags/self-hosted/</guid>
+        <guid>https://hugo.lonusu.com/tags/self-hosted/</guid>
         <description></description>
         </item>
         <item>
         <title>css</title>
-        <link>https://aerland.xyz/tags/css/</link>
+        <link>https://hugo.lonusu.com/tags/css/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/tags/css/</guid>
+        <guid>https://hugo.lonusu.com/tags/css/</guid>
         <description></description>
         </item>
         <item>
         <title>html</title>
-        <link>https://aerland.xyz/tags/html/</link>
+        <link>https://hugo.lonusu.com/tags/html/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/tags/html/</guid>
+        <guid>https://hugo.lonusu.com/tags/html/</guid>
         <description></description>
         </item>
         <item>
         <title>markdown</title>
-        <link>https://aerland.xyz/tags/markdown/</link>
+        <link>https://hugo.lonusu.com/tags/markdown/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/tags/markdown/</guid>
+        <guid>https://hugo.lonusu.com/tags/markdown/</guid>
         <description></description>
         </item>
         <item>
         <title>themes</title>
-        <link>https://aerland.xyz/tags/themes/</link>
+        <link>https://hugo.lonusu.com/tags/themes/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://aerland.xyz/tags/themes/</guid>
+        <guid>https://hugo.lonusu.com/tags/themes/</guid>
         <description></description>
         </item>
         
