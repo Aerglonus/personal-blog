@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: https://aerland.xyz/sitemap.xml
+Sitemap: https://hugo.lonusu.com/sitemap.xml
 Allow: /p/
 Disallow: /tags/
 Disallow: /categories/

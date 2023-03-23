@@ -16,12 +16,12 @@ languages:
 disqusShortname: NotLonus
 
 # GA Tracking ID
-googleAnalytics:
+googleAnalytics: G-KRFQQ0W2S9
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
 DefaultContentLanguage: en
-enableRobotsTXT: false
+enableRobotsTXT: true
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage: true

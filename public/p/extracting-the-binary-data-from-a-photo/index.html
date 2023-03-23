@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Write up of how I solved the Glory of the Garden picoCTF challenge'><title>Extracting the binary data from a photo</title>
+
+<link rel='canonical' href='https://hugo.lonusu.com/p/extracting-the-binary-data-from-a-photo/'>
+
+<link rel="stylesheet" href="/scss/style.min.d03848af3395ea635c77881e6e10ae46e11d5b897ed2ec25484bc1c030c8b667.css"><meta property='og:title' content='Extracting the binary data from a photo'>
+<meta property='og:description' content='Write up of how I solved the Glory of the Garden picoCTF challenge'>
+<meta property='og:url' content='https://hugo.lonusu.com/p/extracting-the-binary-data-from-a-photo/'>
+<meta property='og:site_name' content='Lonus'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='write-up' /><meta property='article:tag' content='ctfs' /><meta property='article:tag' content='linux' /><meta property='article:tag' content='capture-the-flag' /><meta property='article:tag' content='hacking' /><meta property='article:published_time' content='2023-03-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://hugo.lonusu.com/p/extracting-the-binary-data-from-a-photo/coding-hero.jpg' />
+<meta name="twitter:site" content="@aerglonus">
+    <meta name="twitter:creator" content="@aerglonus"><meta name="twitter:title" content="Extracting the binary data from a photo">
+<meta name="twitter:description" content="Write up of how I solved the Glory of the Garden picoCTF challenge"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://hugo.lonusu.com/p/extracting-the-binary-data-from-a-photo/coding-hero.jpg' />
+<link rel="shortcut icon" href="/favicon.png" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRFQQ0W2S9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KRFQQ0W2S9', { 'anonymize_ip': false });
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7891761786816782"
+  crossorigin="anonymous"></script>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRFQQ0W2S9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KRFQQ0W2S9');
+  </script>
+<meta name="keywords" content="write-up, ctfs, linux, capture-the-flag, hacking" />
+
+
+<meta
+  content=" - Write up of how I solved the Glory of the Garden picoCTF challenge"
+  property="og:description" />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar200_hua5cabf616482f17f7f951066ed6e9d94_9155_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Lonus</a></h1>
+            <h2 class="site-description">Just dumping everything I learn.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/aerglonus'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitch.tv/aerglonus'
+                        target="_blank"
+                        title="Twitch"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitch" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <desc>Download more icon variants from https://tabler-icons.io/i/brand-twitch</desc>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />
+  <line x1="16" y1="8" x2="16" y2="12" />
+  <line x1="12" y1="8" x2="12" y2="12" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/aerglonus'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://hugo.lonusu.com/" selected>English</option>
+                        
+                            <option value="https://hugo.lonusu.com/ko/" >한국어</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/extracting-the-binary-data-from-a-photo/">
+                <img src="/p/extracting-the-binary-data-from-a-photo/coding-hero_hu4f494a07e43c3ee16cd684f59d8c928d_83487_800x0_resize_q75_box.jpg"
+                        srcset="/p/extracting-the-binary-data-from-a-photo/coding-hero_hu4f494a07e43c3ee16cd684f59d8c928d_83487_800x0_resize_q75_box.jpg 800w, /p/extracting-the-binary-data-from-a-photo/coding-hero_hu4f494a07e43c3ee16cd684f59d8c928d_83487_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="413" 
+                        loading="lazy"
+                        alt="Featured image of post Extracting the binary data from a photo" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/hacking/" >
+                Hacking
+            </a>
+        
+            <a href="/categories/ctfs/" >
+                CTFs
+            </a>
+        
+            <a href="/categories/picoctf/" >
+                picoCTF
+            </a>
+        
+            <a href="/categories/challenges/" >
+                Challenges
+            </a>
+        
+            <a href="/categories/linux/" >
+                Linux
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/extracting-the-binary-data-from-a-photo/">Extracting the binary data from a photo</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Write up of how I solved the Glory of the Garden picoCTF challenge
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 23, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://hugo.lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/" class="link">한국어</a>
+                
+            </div>
+        </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>This is just a write up on resolving picoCTF(2021) Glory of the Garden challenge.</p>
+</blockquote>
+<p>First I tried running <strong>exiftool</strong> which showed me the metadata of the photo where I noticed that the lines with the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Red Tone Reproduction Curve     : <span class="o">(</span>Binary data <span class="m">2060</span> bytes, use -b option to extract<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Green Tone Reproduction Curve   : <span class="o">(</span>Binary data <span class="m">2060</span> bytes, use -b option to extract<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Blue Tone Reproduction Curve    : <span class="o">(</span>Binary data <span class="m">2060</span> bytes, use -b option to extract<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Meaning the photo has son binary data attached to it, now the question is</p>
+<h2 id="how-do-i-extract-that-data">How do I extract that data?</h2>
+<p>After some digging on Youtube School I found various ways to do it</p>
+<blockquote>
+<p>The challenge hint it is about using a hex editor which it will help you extract the data. Using that method you will have to scroll and found the flag.</p>
+</blockquote>
+<h2 id="using-strings-command">Using <strong>strings</strong> command</h2>
+<p>The first way and the most easy one is using <strong>strings</strong> command. Using this command it will show you only the ASCII representation of the strings inside the binary data of the image.</p>
+<blockquote>
+<p>strings - print the sequences of printable characters in files</p>
+</blockquote>
+<p>Command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">strings garden.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">%zR<span class="o">}</span>
+</span></span><span class="line"><span class="cl">Tw1&lt;Oi
+</span></span><span class="line"><span class="cl">yg9S
+</span></span><span class="line"><span class="cl">F7v<span class="o">]</span>
+</span></span><span class="line"><span class="cl">m o5Xex#
+</span></span><span class="line"><span class="cl">V8L<span class="p">;</span>
+</span></span><span class="line"><span class="cl">&lt;<span class="o">]</span>zV<span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">ZqKvu
+</span></span><span class="line"><span class="cl">7g4js<span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">wae:uc<span class="o">(</span>&gt;YwG
+</span></span><span class="line"><span class="cl"><span class="m">6</span>       <span class="sb">`</span>A
+</span></span><span class="line"><span class="cl">xhS~
+</span></span><span class="line"><span class="cl"><span class="nv">wM</span><span class="o">=</span>GV
+</span></span><span class="line"><span class="cl">gDau%~
+</span></span><span class="line"><span class="cl">,~J<span class="p">|</span>
+</span></span><span class="line"><span class="cl">u<span class="o">)(])</span><span class="nv">F</span>
+</span></span><span class="line"><span class="cl"><span class="o">={</span>~5
+</span></span><span class="line"><span class="cl">h--@3
+</span></span><span class="line"><span class="cl">cZi-
+</span></span><span class="line"><span class="cl">M<span class="o">(</span>.I
+</span></span><span class="line"><span class="cl"><span class="o">]</span>hWP<span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">jc#k
+</span></span><span class="line"><span class="cl"><span class="o">=</span>7g<span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">mjx/
+</span></span><span class="line"><span class="cl">s<span class="se">\]</span><span class="p">|</span>.<span class="s2">&#34;Ue
+</span></span></span><span class="line"><span class="cl"><span class="s2">\qZf
+</span></span></span><span class="line"><span class="cl"><span class="s2">--------------
+</span></span></span><span class="line"><span class="cl"><span class="s2">Here is a flag &#34;</span>picoCTF<span class="o">{</span>more_than_m33ts_the_3y3eBdBd2cc<span class="o">}</span><span class="s2">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">--------------
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="using-xxd-command">Using <strong>xxd</strong> command</h2>
+<p>The second way to do it will be using the <strong>xxd</strong> command. Using it will start dumping in to the shell all the hex data of the image including the flag.</p>
+<blockquote>
+<p>xxd creates a hex dump of a given file or standard input. It can also convert a hex dump back to</p>
+</blockquote>
+<pre><code>its original binary form.  Like uuencode(1) and uudecode(1) it allows the transmission  of  binary
+data  in a `mail-safe' ASCII representation, but has the advantage of decoding to standard output. Moreover, it can be used to perform binary file patching.
+</code></pre>
+<p>Command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">xxd garden.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">002304a0: a9e2 cfba bf51 5c75 a71b b6e3 7b1f 97cb  .....Q<span class="se">\u</span>....<span class="o">{</span>...
+</span></span><span class="line"><span class="cl">002304b0: 25a5 f5c5 4bda c9a9 6ecf 7ed4 fc4f e1cd  %...K...n.~..O..
+</span></span><span class="line"><span class="cl">002304c0: <span class="m">2919</span> e6bb 591b 9c2a 73d2 be71 bdf8 977d  <span class="o">)</span>...Y..*s..q...<span class="o">}</span>
+</span></span><span class="line"><span class="cl">002304d0: e27d <span class="m">6574</span> fd3d 1a08 233f bd6e 99c7 6af9  .<span class="o">}</span>et.<span class="o">=</span>..#?.n..j.
+</span></span><span class="line"><span class="cl">002304e0: e2f7 fd6f fc09 ff00 9d6f fc2b ff00 <span class="m">9096</span>  ...o.....o.+....
+</span></span><span class="line"><span class="cl">002304f0: adff 005d ff00 a0ae 7a51 8d4f 68f5 568a  ...<span class="o">]</span>....zQ.Oh.V.
+</span></span><span class="line"><span class="cl">00230500: d9f9 9f63 4b2b c1e5 daf2 7b59 db49 4ba3  ...cK+....<span class="o">{</span>Y.IK.
+</span></span><span class="line"><span class="cl">00230510: f43e b881 5e30 <span class="m">1060</span> <span class="m">8030</span> 47d6 bacb 58cb  .&gt;..^0.<span class="sb">`</span>.0G...X.
+</span></span><span class="line"><span class="cl">00230520: <span class="m">1046</span> 07b5 <span class="m">7216</span> df7e 5ff7 c576 363f ebab  .F..r..~_..v6?..
+</span></span><span class="line"><span class="cl">00230530: b70d 18ce 3ccd 6a7e 6b8d af56 b579 39ca  ....&lt;.j~k..V.y9.
+</span></span><span class="line"><span class="cl">00230540: eeef 53ae <span class="m">8620</span> 31b8 751f <span class="m">9514</span> f7fb cff5  ..S.. 1.u.......
+</span></span><span class="line"><span class="cl">00230550: a2bb bdac <span class="m">9687</span> 98e4 d3b2 e87f ffd9 <span class="m">4865</span>  ..............He
+</span></span><span class="line"><span class="cl">00230560: <span class="m">7265</span> <span class="m">2069</span> <span class="m">7320</span> <span class="m">6120</span> 666c <span class="m">6167</span> <span class="m">2022</span> <span class="m">7069</span>  re is a flag <span class="s2">&#34;pi
+</span></span></span><span class="line"><span class="cl"><span class="s2">00230570: 636f 4354 467b 6d6f 7265 5f74 6861 6e5f  coCTF{more_than_
+</span></span></span><span class="line"><span class="cl"><span class="s2">00230580: 6d33 3374 735f 7468 655f 3379 3365 4264  m33ts_the_3y3eBd
+</span></span></span><span class="line"><span class="cl"><span class="s2">00230590: 4264 3263 637d 220a                      Bd2cc}&#34;</span>.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And that&rsquo;s it !! got the flag but not stopping I kept looking around the internet and found some extra steps to make the output of the <strong>strings</strong> fancier, Like only printing the flag passing<strong>tail</strong> command to the pipeline or getting only the flag without the extra text passing the <strong>cut</strong> command or making a simple bash script to automate everything.</p>
+<h2 id="extra-steps">Extra steps:</h2>
+<h3 id="passing-the-tail-command-to-the-pipeline">Passing the <strong>tail</strong> command to the pipeline</h3>
+<p><code>What does the tail command do?</code></p>
+<blockquote>
+<p>tail - Print the last 10 lines of each FILE to standard output. With more than one FILE, precede each with a header giving the file name.</p>
+</blockquote>
+<pre><code>   -n, --lines=[+]NUM
+          output the last NUM lines, instead of the last 10; or use -n +NUM to output  starting  with
+          line NUM
+</code></pre>
+<p>Since the flag is on the last line of the data I passed the following to the pipeline</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">tail -n <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now the <strong>strings</strong> command should look like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">strings garden.jpg <span class="p">|</span> tail -n <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>and the Output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Here is a flag <span class="s2">&#34;picoCTF{more_than_m33ts_the_3y3eBdBd2cc}&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="passing-the-cut-command-to-the-pipeline">Passing the <strong>cut</strong> command to the pipeline</h3>
+<p><code>What does the cut command do?</code></p>
+<blockquote>
+<p>cut - remove sections from each line of files
+Print selected parts of lines from each FILE to standard output. - d, &ndash;delimiter=DELIM</p>
+</blockquote>
+<pre><code>			use DELIM instead of TAB for field delimiter
+	- f, --fields=LIST
+			 select only these fields; also print any line that contains no delimiter character, unless the -s option is specified
+</code></pre>
+<p>So as you can see the entire string has <strong>&ldquo;Here is a flag&rdquo;</strong> and the flag is surrounded by <strong>&quot;&quot;</strong> so using the <strong>-d</strong> and <strong>-f</strong> come in handy to tell the command what part of the string I want so by passing <strong>-d</strong> flag like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">-d <span class="s1">&#39;&#34;&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>this way the <strong>cut</strong> command it&rsquo;ll be set <strong>(&quot;)</strong> as the delimiter to split the string into fields, the double quotes is used to separate and distinguish one section of text from another within a larger body of text and the way <strong>cut -d</strong> works the <strong>-f</strong> flags needs to be specified or else will throw this error:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cut: you must specify a list of bytes, characters, or fields
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>So the way to do this is finding on what field is the flag <strong>cut</strong> works kind of like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Here is the Flag  <span class="s2">&#34;picoCTF{more_than_m33ts_the_3y3eBdBd2cc}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>______1________<span class="p">|</span> <span class="p">|</span>___________________2____________________<span class="p">|</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>When <strong>cut</strong> processes the input string, it splits it into fields based on the delimiter. In the case of the string <strong>Here is the Flag &ldquo;picoCTF{more_than_m33ts_the_3y3eBdBd2cc}&rdquo;</strong>, the delimiter (&quot;) occurs twice in the string, so cut splits it into three fields:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1. `Here is the flag`
+</span></span><span class="line"><span class="cl">2. &#34;picoCTF{more_than_m33ts_the_3y3eBdBd2cc}&#34;
+</span></span><span class="line"><span class="cl">3. empty field
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After <strong>cut</strong> has split the input string into fields, you can use the <strong>-f</strong> option to specify which fields you want to keep. In this case, we want to keep the second field, which contains the flag. So we use the <strong>-f 2</strong> option to tell <strong>cut</strong> to keep only the second field.</p>
+<p>So, the <strong>-d &lsquo;&quot;&rsquo;</strong> option is not removing the double quotes from the fields. Rather, it is specifying the character that should be used as the delimiter to separate the input string into fields. The full command should look like this now:</p>
+<p>Command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings garden.jpg <span class="p">|</span> tail -n <span class="m">1</span> <span class="p">|</span> cut -d <span class="s1">&#39;&#34;&#39;</span> -f2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">picoCTF<span class="o">{</span>more_than_m33ts_the_3y3eBdBd2cc<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And to automate all this I just pasted the command into a bash file so instead of writing all that line all I have to do is run the file and pass the name of the photo.
+So as for the file just create an <strong>.sh</strong> file and paste the code but instead of specifying the photo name I change for a positional parameter so it can be run this way:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./&lt;filename&gt;.sh garden.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>So the modified command looks like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>strings <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="p">|</span> tail -n <span class="m">1</span> <span class="p">|</span> cut -d <span class="s1">&#39;&#34;&#39;</span> -f2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>In this updated command, <strong>$1</strong> is a positional parameter that refers to the first argument passed to the script when it is executed. So, if you execute the script with the command <strong>./bashfile.sh garden.jpg,</strong> then <strong>$1</strong> will be replaced with <strong>garden.jpg</strong> in the script. This allows you to run the script with different image file names without having to edit the script itself.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/write-up/">write-up</a>
+        
+            <a href="/tags/ctfs/">ctfs</a>
+        
+            <a href="/tags/linux/">linux</a>
+        
+            <a href="/tags/capture-the-flag/">capture-the-flag</a>
+        
+            <a href="/tags/hacking/">hacking</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/">
+        
+        
+            <div class="article-image">
+                <img src="/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost.e0de707be2675882e645eb7f6719594f_hu7136eeb6509210a4b2b53073df7006c6_75676_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How to install &amp; host Ghost with Cloudflare Argo tunnel"
+                        
+                        data-hash="md5-4N5we&#43;JnWILmRet/ZxlZTw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to install &amp; host Ghost with Cloudflare Argo tunnel</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" repo="aerglonus/blog-comments"
+    issue-term="pathname" 
+    theme="dark-blue" label="Comment"  crossorigin="anonymous" async>
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme() {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage({
+                    type: 'set-theme',
+                    theme: theme
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+        2021 -
+        
+        2023 Lonus
+    </section>
+
+    
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>Search</label>
+            <input name="keyword" required placeholder="Type something..." />
+        
+            <button title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#how-do-i-extract-that-data">How do I extract that data?</a></li>
+    <li><a href="#using-strings-command">Using <strong>strings</strong> command</a></li>
+    <li><a href="#using-xxd-command">Using <strong>xxd</strong> command</a></li>
+    <li><a href="#extra-steps">Extra steps:</a>
+      <ol>
+        <li><a href="#passing-the-tail-command-to-the-pipeline">Passing the <strong>tail</strong> command to the pipeline</a></li>
+        <li><a href="#passing-the-cut-command-to-the-pipeline">Passing the <strong>cut</strong> command to the pipeline</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

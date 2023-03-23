@@ -6,7 +6,47 @@
         <description>Recent content in Categories on Lonus</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.lonusu.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.lonusu.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Challenges</title>
+        <link>https://hugo.lonusu.com/categories/challenges/</link>
+        <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.lonusu.com/categories/challenges/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CTFs</title>
+        <link>https://hugo.lonusu.com/categories/ctfs/</link>
+        <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.lonusu.com/categories/ctfs/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hacking</title>
+        <link>https://hugo.lonusu.com/categories/hacking/</link>
+        <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.lonusu.com/categories/hacking/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://hugo.lonusu.com/categories/linux/</link>
+        <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.lonusu.com/categories/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>picoCTF</title>
+        <link>https://hugo.lonusu.com/categories/picoctf/</link>
+        <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo.lonusu.com/categories/picoctf/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Cloudflare</title>
         <link>https://hugo.lonusu.com/categories/cloudflare/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
@@ -31,19 +71,11 @@
         <description></description>
         </item>
         <item>
-        <title>Linux</title>
-        <link>https://hugo.lonusu.com/categories/linux/</link>
+        <title>Self-hosting</title>
+        <link>https://hugo.lonusu.com/categories/self-hosting/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/linux/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Sefl-hosting</title>
-        <link>https://hugo.lonusu.com/categories/sefl-hosting/</link>
-        <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://hugo.lonusu.com/categories/sefl-hosting/</guid>
+        <guid>https://hugo.lonusu.com/categories/self-hosting/</guid>
         <description></description>
         </item>
         <item>
