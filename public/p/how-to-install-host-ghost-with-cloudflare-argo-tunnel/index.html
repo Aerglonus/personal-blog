@@ -15,20 +15,28 @@
 <meta name="twitter:description" content="A guide to teach you how to run Ghost and Cloudflare Argo Tunnel"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hugo.lonusu.com/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost.png' />
 <link rel="shortcut icon" href="/favicon.png" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRFQQ0W2S9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KRFQQ0W2S9', { 'anonymize_ip': false });
+}
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7891761786816782"
   crossorigin="anonymous"></script>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRFQQ0W2S9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B2RN5CWJTF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', 'G-B2RN5CWJTF');
-</script>
+    gtag('config', 'G-KRFQQ0W2S9');
+  </script>
 <meta name="keywords" content="guide, self-hosted, linux, cms" />
 
 
@@ -311,8 +319,8 @@
                 Guide
             </a>
         
-            <a href="/categories/sefl-hosting/" >
-                Sefl-hosting
+            <a href="/categories/self-hosting/" >
+                Self-hosting
             </a>
         
             <a href="/categories/ghost/" >
@@ -449,7 +457,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
-</span></span><span class="line"><span class="cl">sudo apt upgrade  
+</span></span><span class="line"><span class="cl">sudo apt upgrade
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="installing-nginx">INSTALLING NGINX</h2>
@@ -471,7 +479,7 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># to check if its running run </span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># to check if its running run</span>
 </span></span><span class="line"><span class="cl">sudo systemctl status nginx
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># if the output doesn&#39;t say its running run</span>
@@ -512,11 +520,11 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvm install --lts <span class="c1"># installs the supported version</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># It automatically changes to the version you installed </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># It automatically changes to the version you installed</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># if you want to check the installed version run</span>
 </span></span><span class="line"><span class="cl">nvm ls
 </span></span><span class="line"><span class="cl"><span class="c1"># and itll show you current installed versions and the one</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># is in use. </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># is in use.</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>If by the time you are doing this the <code>LTS</code> of nodejs changed or the one supported in Ghost you can do:</p>
@@ -532,7 +540,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvm ls-remote <span class="c1"># it&#39;ll show you all the node versions available</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Select the one that ghost supports</span>
 </span></span><span class="line"><span class="cl">nvm install v16.5.1 <span class="c1"># change the version to the one you want</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># and </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># and</span>
 </span></span><span class="line"><span class="cl">nvm use v16.5.1 <span class="c1"># again type the one you just installed</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -663,7 +671,7 @@
 </span></span><span class="line"><span class="cl">Enter your MySQL password: <span class="c1"># use the same password you put when we set upt mysql</span>
 </span></span><span class="line"><span class="cl">Enter your Ghost database name: <span class="c1"># just press enter</span>
 </span></span><span class="line"><span class="cl">Setting up <span class="s2">&#34;ghost&#34;</span> system user
-</span></span><span class="line"><span class="cl">? Do you wish to <span class="nb">set</span> up <span class="s2">&#34;ghost&#34;</span> mysql user? <span class="o">(</span>Y/n<span class="o">)</span> : Y 
+</span></span><span class="line"><span class="cl">? Do you wish to <span class="nb">set</span> up <span class="s2">&#34;ghost&#34;</span> mysql user? <span class="o">(</span>Y/n<span class="o">)</span> : Y
 </span></span><span class="line"><span class="cl">Do you wish to <span class="nb">set</span> up Nginx? <span class="o">(</span>Y/n<span class="o">)</span> : Y <span class="c1"># so it automatically creates the nginx config files</span>
 </span></span><span class="line"><span class="cl">Setting up SSL : <span class="c1"># press no since we are gonna add manually the certificates to the config file later</span>
 </span></span><span class="line"><span class="cl">Setting up Systemd: <span class="c1"># press yes if you want your site to run on boot</span>
@@ -1109,17 +1117,17 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create the tunnel</span>
 </span></span><span class="line"><span class="cl">cloudflared tunnel create &lt;NAME&gt;
 </span></span><span class="line"><span class="cl"><span class="c1"># Running this command will:</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 1 - Create a tunnel by establishing a persistent relationship between </span>
-</span></span><span class="line"><span class="cl"><span class="c1"># the name you provide and a UUID for your tunnel. At this point, </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1 - Create a tunnel by establishing a persistent relationship between</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the name you provide and a UUID for your tunnel. At this point,</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># no connection is active within the tunnel yet.</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 2 - Generate a tunnel credentials file in the default cloudflared directory.</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 3 - Create a subdomain of .cfargotunnel.com.</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#From the output of the command, take note of the tunnel’s UUID and </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#From the output of the command, take note of the tunnel’s UUID and</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># the path to your tunnel’s credentials file.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Check that the tunnel was creating</span>
 </span></span><span class="line"><span class="cl">cloudflared tunnel list
-</span></span><span class="line"><span class="cl"><span class="c1"># It&#39;ll prompt you with the tunnels that you have created including </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># It&#39;ll prompt you with the tunnels that you have created including</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># the ones that you created through zero trust dashboard.</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -1143,7 +1151,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># move the .cloudflared folder</span>
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/.cloudflared
 </span></span><span class="line"><span class="cl"><span class="c1"># If you LS that directory you will see two files</span>
-</span></span><span class="line"><span class="cl">ls 
+</span></span><span class="line"><span class="cl">ls
 </span></span><span class="line"><span class="cl">cert.pem the-tunnel-you-created-UUID.json
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># create the config file</span>
@@ -1172,7 +1180,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">credentials</span><span class="p">-</span><span class="nx">file</span>: <span class="sr">/home/</span>$<span class="nx">USER</span><span class="sr">/.cloudflared/</span><span class="nx">your</span><span class="p">-</span><span class="nx">tunnel</span><span class="p">-</span><span class="nx">UUID</span>.<span class="nx">json</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ingress</span>:<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="p">-</span> <span class="nx">hostname</span>: <span class="nx">your</span><span class="p">-</span><span class="nx">domain</span><span class="p">-</span><span class="nx">name</span>  <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="p">-</span> <span class="nx">hostname</span>: <span class="nx">your</span><span class="p">-</span><span class="nx">domain</span><span class="p">-</span><span class="nx">name</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">service</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">localhost</span>:<span class="m">443</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">originRequest</span>:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">noTLSVerify</span>: <span class="nx">true</span><span class="err">
@@ -1218,7 +1226,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>If you want to run the tunnel as a service follow Cloudflare&rsquo;s guide <a class="link" href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/run-tunnel/as-a-service/linux/"  target="_blank" rel="noopener"
-    >Run as a service on Linux · Cloudflare Zero Trust docs.</a> </p>
+    >Run as a service on Linux · Cloudflare Zero Trust docs.</a></p>
 <h2 id="running-ghost">Running GHOST</h2>
 <hr>
 <p>If you added Ghost to systemd, all you have to do is start your service</p>
@@ -1231,11 +1239,11 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># The name of the service might be different so look for it in </span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># The name of the service might be different so look for it in</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># /etc/systemd/system/ or /lib/systemd/systemd/</span>
 </span></span><span class="line"><span class="cl">sudo systemctl start ghost_yourdomain  <span class="c1"># you can also stop/disable/enable</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># or </span>
-</span></span><span class="line"><span class="cl">sudo service ghost_yourdomain start <span class="c1"># you can also stop/disable/enable </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
+</span></span><span class="line"><span class="cl">sudo service ghost_yourdomain start <span class="c1"># you can also stop/disable/enable</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>But if you want to run it and see if everything is working properly move to where you have installed it</p>
@@ -1322,6 +1330,30 @@
     <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/extracting-the-binary-data-from-a-photo/">
+        
+        
+            <div class="article-image">
+                <img src="/p/extracting-the-binary-data-from-a-photo/coding-hero.06c0ead0655b2a52cfc40965e3ef2e70_hu4f494a07e43c3ee16cd684f59d8c928d_83487_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Extracting the binary data from a photo"
+                        
+                        data-hash="md5-BsDq0GVbKlLPxAll4&#43;8ucA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Extracting the binary data from a photo</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
