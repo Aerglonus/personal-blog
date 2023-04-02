@@ -2,120 +2,120 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Lonus</title>
-        <link>https://hugo.lonusu.com/categories/</link>
+        <link>https://lonusu.com/categories/</link>
         <description>Recent content in Categories on Lonus</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.lonusu.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lonusu.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Challenges</title>
-        <link>https://hugo.lonusu.com/categories/challenges/</link>
+        <link>https://lonusu.com/categories/challenges/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/challenges/</guid>
+        <guid>https://lonusu.com/categories/challenges/</guid>
         <description></description>
         </item>
         <item>
         <title>CTFs</title>
-        <link>https://hugo.lonusu.com/categories/ctfs/</link>
+        <link>https://lonusu.com/categories/ctfs/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/ctfs/</guid>
+        <guid>https://lonusu.com/categories/ctfs/</guid>
         <description></description>
         </item>
         <item>
         <title>Hacking</title>
-        <link>https://hugo.lonusu.com/categories/hacking/</link>
+        <link>https://lonusu.com/categories/hacking/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/hacking/</guid>
+        <guid>https://lonusu.com/categories/hacking/</guid>
         <description></description>
         </item>
         <item>
         <title>Linux</title>
-        <link>https://hugo.lonusu.com/categories/linux/</link>
+        <link>https://lonusu.com/categories/linux/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/linux/</guid>
+        <guid>https://lonusu.com/categories/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>picoCTF</title>
-        <link>https://hugo.lonusu.com/categories/picoctf/</link>
+        <link>https://lonusu.com/categories/picoctf/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/picoctf/</guid>
+        <guid>https://lonusu.com/categories/picoctf/</guid>
         <description></description>
         </item>
         <item>
         <title>Cloudflare</title>
-        <link>https://hugo.lonusu.com/categories/cloudflare/</link>
+        <link>https://lonusu.com/categories/cloudflare/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/cloudflare/</guid>
+        <guid>https://lonusu.com/categories/cloudflare/</guid>
         <description></description>
         </item>
         <item>
         <title>Ghost</title>
-        <link>https://hugo.lonusu.com/categories/ghost/</link>
+        <link>https://lonusu.com/categories/ghost/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/ghost/</guid>
+        <guid>https://lonusu.com/categories/ghost/</guid>
         <description></description>
         </item>
         <item>
         <title>Guide</title>
-        <link>https://hugo.lonusu.com/categories/guide/</link>
+        <link>https://lonusu.com/categories/guide/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/guide/</guid>
+        <guid>https://lonusu.com/categories/guide/</guid>
         <description></description>
         </item>
         <item>
         <title>Self-hosting</title>
-        <link>https://hugo.lonusu.com/categories/self-hosting/</link>
+        <link>https://lonusu.com/categories/self-hosting/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/self-hosting/</guid>
+        <guid>https://lonusu.com/categories/self-hosting/</guid>
         <description></description>
         </item>
         <item>
         <title>OBS</title>
-        <link>https://hugo.lonusu.com/categories/obs/</link>
+        <link>https://lonusu.com/categories/obs/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/obs/</guid>
+        <guid>https://lonusu.com/categories/obs/</guid>
         <description></description>
         </item>
         <item>
         <title>Streaming</title>
-        <link>https://hugo.lonusu.com/categories/streaming/</link>
+        <link>https://lonusu.com/categories/streaming/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/streaming/</guid>
+        <guid>https://lonusu.com/categories/streaming/</guid>
         <description></description>
         </item>
         <item>
         <title>syntax</title>
-        <link>https://hugo.lonusu.com/categories/syntax/</link>
+        <link>https://lonusu.com/categories/syntax/</link>
         <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/syntax/</guid>
+        <guid>https://lonusu.com/categories/syntax/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>https://hugo.lonusu.com/categories/test/</link>
+        <link>https://lonusu.com/categories/test/</link>
         <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/test/</guid>
-        <description>&lt;img src="https://hugo.lonusu.com/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://lonusu.com/categories/test/</guid>
+        <description>&lt;img src="https://lonusu.com/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         <item>
         <title>themes</title>
-        <link>https://hugo.lonusu.com/categories/themes/</link>
+        <link>https://lonusu.com/categories/themes/</link>
         <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/categories/themes/</guid>
+        <guid>https://lonusu.com/categories/themes/</guid>
         <description></description>
         </item>
         

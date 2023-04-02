@@ -2,517 +2,517 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hugo.lonusu.com/ko/</loc>
+    <loc>https://lonusu.com/ko/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/"
+                href="https://lonusu.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/"
+                href="https://lonusu.com/ko/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/capture-the-flag/</loc>
+    <loc>https://lonusu.com/ko/tags/capture-the-flag/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/capture-the-flag/"
+                href="https://lonusu.com/tags/capture-the-flag/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/capture-the-flag/"
+                href="https://lonusu.com/ko/tags/capture-the-flag/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/</loc>
+    <loc>https://lonusu.com/ko/categories/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/"
+                href="https://lonusu.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/"
+                href="https://lonusu.com/ko/categories/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/challenges/</loc>
+    <loc>https://lonusu.com/ko/categories/challenges/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/challenges/"
+                href="https://lonusu.com/categories/challenges/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/challenges/"
+                href="https://lonusu.com/ko/categories/challenges/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/ctfs/</loc>
+    <loc>https://lonusu.com/ko/tags/ctfs/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/ctfs/"
+                href="https://lonusu.com/tags/ctfs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/ctfs/"
+                href="https://lonusu.com/ko/tags/ctfs/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/ctfs/</loc>
+    <loc>https://lonusu.com/ko/categories/ctfs/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/ctfs/"
+                href="https://lonusu.com/categories/ctfs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/ctfs/"
+                href="https://lonusu.com/ko/categories/ctfs/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/</loc>
+    <loc>https://lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/p/extracting-the-binary-data-from-a-photo/"
+                href="https://lonusu.com/p/extracting-the-binary-data-from-a-photo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/"
+                href="https://lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/hacking/</loc>
+    <loc>https://lonusu.com/ko/tags/hacking/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/hacking/"
+                href="https://lonusu.com/tags/hacking/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/hacking/"
+                href="https://lonusu.com/ko/tags/hacking/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/hacking/</loc>
+    <loc>https://lonusu.com/ko/categories/hacking/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/hacking/"
+                href="https://lonusu.com/categories/hacking/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/hacking/"
+                href="https://lonusu.com/ko/categories/hacking/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/linux/</loc>
+    <loc>https://lonusu.com/ko/tags/linux/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/linux/"
+                href="https://lonusu.com/tags/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/linux/"
+                href="https://lonusu.com/ko/tags/linux/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/linux/</loc>
+    <loc>https://lonusu.com/ko/categories/linux/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/linux/"
+                href="https://lonusu.com/categories/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/linux/"
+                href="https://lonusu.com/ko/categories/linux/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/picoctf/</loc>
+    <loc>https://lonusu.com/ko/categories/picoctf/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/picoctf/"
+                href="https://lonusu.com/categories/picoctf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/picoctf/"
+                href="https://lonusu.com/ko/categories/picoctf/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/post/</loc>
+    <loc>https://lonusu.com/ko/post/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/post/"
+                href="https://lonusu.com/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/post/"
+                href="https://lonusu.com/ko/post/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/</loc>
+    <loc>https://lonusu.com/ko/tags/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/"
+                href="https://lonusu.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/"
+                href="https://lonusu.com/ko/tags/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/write-up/</loc>
+    <loc>https://lonusu.com/ko/tags/write-up/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/write-up/"
+                href="https://lonusu.com/tags/write-up/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/write-up/"
+                href="https://lonusu.com/ko/tags/write-up/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/cloudflare/</loc>
+    <loc>https://lonusu.com/ko/categories/cloudflare/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/cloudflare/"
+                href="https://lonusu.com/categories/cloudflare/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/cloudflare/"
+                href="https://lonusu.com/ko/categories/cloudflare/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/cms/</loc>
+    <loc>https://lonusu.com/ko/tags/cms/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/cms/"
+                href="https://lonusu.com/tags/cms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/cms/"
+                href="https://lonusu.com/ko/tags/cms/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/ghost/</loc>
+    <loc>https://lonusu.com/ko/categories/ghost/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/ghost/"
+                href="https://lonusu.com/categories/ghost/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/ghost/"
+                href="https://lonusu.com/ko/categories/ghost/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/guide/</loc>
+    <loc>https://lonusu.com/ko/tags/guide/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/guide/"
+                href="https://lonusu.com/tags/guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/guide/"
+                href="https://lonusu.com/ko/tags/guide/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/guide/</loc>
+    <loc>https://lonusu.com/ko/categories/guide/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/guide/"
+                href="https://lonusu.com/categories/guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/guide/"
+                href="https://lonusu.com/ko/categories/guide/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</loc>
+    <loc>https://lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
+                href="https://lonusu.com/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
+                href="https://lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/sefl-hosting/</loc>
+    <loc>https://lonusu.com/ko/categories/sefl-hosting/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/self-hosted/</loc>
+    <loc>https://lonusu.com/ko/tags/self-hosted/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/self-hosted/"
+                href="https://lonusu.com/tags/self-hosted/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/self-hosted/"
+                href="https://lonusu.com/ko/tags/self-hosted/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/css/</loc>
+    <loc>https://lonusu.com/ko/tags/css/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/css/"
+                href="https://lonusu.com/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/css/"
+                href="https://lonusu.com/ko/tags/css/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/html/</loc>
+    <loc>https://lonusu.com/ko/tags/html/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/html/"
+                href="https://lonusu.com/tags/html/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/html/"
+                href="https://lonusu.com/ko/tags/html/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/markdown/</loc>
+    <loc>https://lonusu.com/ko/tags/markdown/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/markdown/"
+                href="https://lonusu.com/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/markdown/"
+                href="https://lonusu.com/ko/tags/markdown/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/obs/</loc>
+    <loc>https://lonusu.com/ko/categories/obs/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/obs/"
+                href="https://lonusu.com/categories/obs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/obs/"
+                href="https://lonusu.com/ko/categories/obs/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/p/obs-split-audio-guide/</loc>
+    <loc>https://lonusu.com/ko/p/obs-split-audio-guide/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/p/obs-split-audio-guide/"
+                href="https://lonusu.com/p/obs-split-audio-guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/p/obs-split-audio-guide/"
+                href="https://lonusu.com/ko/p/obs-split-audio-guide/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/categories/streaming/</loc>
+    <loc>https://lonusu.com/ko/categories/streaming/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/categories/streaming/"
+                href="https://lonusu.com/categories/streaming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/categories/streaming/"
+                href="https://lonusu.com/ko/categories/streaming/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/tags/themes/</loc>
+    <loc>https://lonusu.com/ko/tags/themes/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/tags/themes/"
+                href="https://lonusu.com/tags/themes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/tags/themes/"
+                href="https://lonusu.com/ko/tags/themes/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/archives/</loc>
+    <loc>https://lonusu.com/ko/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/archives/"
+                href="https://lonusu.com/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/archives/"
+                href="https://lonusu.com/ko/archives/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/page/</loc>
+    <loc>https://lonusu.com/ko/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/page/"
+                href="https://lonusu.com/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/page/"
+                href="https://lonusu.com/ko/page/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/about/</loc>
+    <loc>https://lonusu.com/ko/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/about/"
+                href="https://lonusu.com/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/about/"
+                href="https://lonusu.com/ko/about/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/links/</loc>
+    <loc>https://lonusu.com/ko/links/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/links/"
+                href="https://lonusu.com/links/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/links/"
+                href="https://lonusu.com/ko/links/"
                 />
   </url><url>
-    <loc>https://hugo.lonusu.com/ko/search/</loc>
+    <loc>https://lonusu.com/ko/search/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hugo.lonusu.com/search/"
+                href="https://lonusu.com/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://hugo.lonusu.com/ko/search/"
+                href="https://lonusu.com/ko/search/"
                 />
   </url>
 </urlset>

@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: https://hugo.lonusu.com/sitemap.xml
+Sitemap: https://lonusu.com/sitemap.xml
 Allow: /p/
 Disallow: /tags/
 Disallow: /categories/

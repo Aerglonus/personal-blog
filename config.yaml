@@ -2,7 +2,7 @@ languageCode: en-us
 paginate: 5
 theme: stack
 title: Lonus Blog
-baseURL: https://hugo.lonusu.com
+baseURL: https://lonusu.com
 languages:
     en:
         languageName: English
