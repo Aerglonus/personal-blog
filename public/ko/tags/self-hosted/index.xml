@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>self-hosted on 로누스</title>
-        <link>https://hugo.lonusu.com/ko/tags/self-hosted/</link>
+        <link>https://lonusu.com/ko/tags/self-hosted/</link>
         <description>Recent content in self-hosted on 로누스</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.lonusu.com/ko/tags/self-hosted/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lonusu.com/ko/tags/self-hosted/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>How to install &amp; host Ghost with Cloudflare Argo tunnel</title>
-        <link>https://hugo.lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</link>
+        <link>https://lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</guid>
-        <description>&lt;img src="https://hugo.lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost.png" alt="Featured image of post How to install &amp; host Ghost with Cloudflare Argo tunnel" /&gt;&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+        <guid>https://lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/</guid>
+        <description>&lt;img src="https://lonusu.com/ko/p/how-to-install-host-ghost-with-cloudflare-argo-tunnel/cloudflared-ghost.png" alt="Featured image of post How to install &amp; host Ghost with Cloudflare Argo tunnel" /&gt;&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;You are here for a reason&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You want to self host your own site but you don&amp;rsquo;t have a public IP and you can&amp;rsquo;t pay your ISP for one because you&amp;rsquo;re poor.&lt;/li&gt;

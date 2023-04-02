@@ -2,104 +2,104 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on 로누스</title>
-        <link>https://hugo.lonusu.com/ko/tags/</link>
+        <link>https://lonusu.com/ko/tags/</link>
         <description>Recent content in Tags on 로누스</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.lonusu.com/ko/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lonusu.com/ko/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>capture-the-flag</title>
-        <link>https://hugo.lonusu.com/ko/tags/capture-the-flag/</link>
+        <link>https://lonusu.com/ko/tags/capture-the-flag/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/capture-the-flag/</guid>
+        <guid>https://lonusu.com/ko/tags/capture-the-flag/</guid>
         <description></description>
         </item>
         <item>
         <title>ctfs</title>
-        <link>https://hugo.lonusu.com/ko/tags/ctfs/</link>
+        <link>https://lonusu.com/ko/tags/ctfs/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/ctfs/</guid>
+        <guid>https://lonusu.com/ko/tags/ctfs/</guid>
         <description></description>
         </item>
         <item>
         <title>hacking</title>
-        <link>https://hugo.lonusu.com/ko/tags/hacking/</link>
+        <link>https://lonusu.com/ko/tags/hacking/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/hacking/</guid>
+        <guid>https://lonusu.com/ko/tags/hacking/</guid>
         <description></description>
         </item>
         <item>
         <title>linux</title>
-        <link>https://hugo.lonusu.com/ko/tags/linux/</link>
+        <link>https://lonusu.com/ko/tags/linux/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/linux/</guid>
+        <guid>https://lonusu.com/ko/tags/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>write-up</title>
-        <link>https://hugo.lonusu.com/ko/tags/write-up/</link>
+        <link>https://lonusu.com/ko/tags/write-up/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/write-up/</guid>
+        <guid>https://lonusu.com/ko/tags/write-up/</guid>
         <description></description>
         </item>
         <item>
         <title>cms</title>
-        <link>https://hugo.lonusu.com/ko/tags/cms/</link>
+        <link>https://lonusu.com/ko/tags/cms/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/cms/</guid>
+        <guid>https://lonusu.com/ko/tags/cms/</guid>
         <description></description>
         </item>
         <item>
         <title>guide</title>
-        <link>https://hugo.lonusu.com/ko/tags/guide/</link>
+        <link>https://lonusu.com/ko/tags/guide/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/guide/</guid>
+        <guid>https://lonusu.com/ko/tags/guide/</guid>
         <description></description>
         </item>
         <item>
         <title>self-hosted</title>
-        <link>https://hugo.lonusu.com/ko/tags/self-hosted/</link>
+        <link>https://lonusu.com/ko/tags/self-hosted/</link>
         <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/self-hosted/</guid>
+        <guid>https://lonusu.com/ko/tags/self-hosted/</guid>
         <description></description>
         </item>
         <item>
         <title>css</title>
-        <link>https://hugo.lonusu.com/ko/tags/css/</link>
+        <link>https://lonusu.com/ko/tags/css/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/css/</guid>
+        <guid>https://lonusu.com/ko/tags/css/</guid>
         <description></description>
         </item>
         <item>
         <title>html</title>
-        <link>https://hugo.lonusu.com/ko/tags/html/</link>
+        <link>https://lonusu.com/ko/tags/html/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/html/</guid>
+        <guid>https://lonusu.com/ko/tags/html/</guid>
         <description></description>
         </item>
         <item>
         <title>markdown</title>
-        <link>https://hugo.lonusu.com/ko/tags/markdown/</link>
+        <link>https://lonusu.com/ko/tags/markdown/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/markdown/</guid>
+        <guid>https://lonusu.com/ko/tags/markdown/</guid>
         <description></description>
         </item>
         <item>
         <title>themes</title>
-        <link>https://hugo.lonusu.com/ko/tags/themes/</link>
+        <link>https://lonusu.com/ko/tags/themes/</link>
         <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/tags/themes/</guid>
+        <guid>https://lonusu.com/ko/tags/themes/</guid>
         <description></description>
         </item>
         

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>write-up on 로누스</title>
-        <link>https://hugo.lonusu.com/ko/tags/write-up/</link>
+        <link>https://lonusu.com/ko/tags/write-up/</link>
         <description>Recent content in write-up on 로누스</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.lonusu.com/ko/tags/write-up/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lonusu.com/ko/tags/write-up/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Extracting the binary data from a photo</title>
-        <link>https://hugo.lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/</link>
+        <link>https://lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/</link>
         <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo.lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/</guid>
-        <description>&lt;img src="https://hugo.lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/coding-hero.jpg" alt="Featured image of post Extracting the binary data from a photo" /&gt;&lt;blockquote&gt;
+        <guid>https://lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/</guid>
+        <description>&lt;img src="https://lonusu.com/ko/p/extracting-the-binary-data-from-a-photo/coding-hero.jpg" alt="Featured image of post Extracting the binary data from a photo" /&gt;&lt;blockquote&gt;
 &lt;p&gt;This is just a write up on resolving picoCTF(2021) Glory of the Garden challenge.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;First I tried running &lt;strong&gt;exiftool&lt;/strong&gt; which showed me the metadata of the photo where I noticed that the lines with the following:&lt;/p&gt;
