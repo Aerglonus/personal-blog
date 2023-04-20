@@ -115,7 +115,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;--------------
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;using-xxd-command&#34;&gt;Using &lt;strong&gt;xxd&lt;/strong&gt; command&lt;/h2&gt;
+&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;using-xxd-command&#34;&gt;Using &lt;strong&gt;xxd&lt;/strong&gt; command&lt;/h2&gt;
 &lt;p&gt;The second way to do it will be using the &lt;strong&gt;xxd&lt;/strong&gt; command. Using it will start dumping in to the shell all the hex data of the image including the flag.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;xxd creates a hex dump of a given file or standard input. It can also convert a hex dump back to&lt;/p&gt;
