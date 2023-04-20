@@ -21,6 +21,8 @@ aliases = ["migrate-from-ghost"]
 image = "cloudflared-ghost.png"
 +++
 
+<!--adsense-->
+
 # Overview
 
 You are here for a reason
@@ -30,23 +32,23 @@ You are here for a reason
 # Requirements:
 
 - Nodejs (v16x)
-  
+
 - NGIX
-  
+
 - Ubuntu 20.04
-  
+
 - MySQL
-  
+
 - Cloudflare account.
-  
+
 - Domain name.
-  
+
 - Cloudflared tunnel service.
-  
+
 - Ghost
-  
+
 - Certbot
-  
+
 
 > **notice:** If you doing in on a old machine keep in mind that you might have a bunch of error and crashes one of them its explained at the end.
 
@@ -54,7 +56,7 @@ You are here for a reason
 
 ```bash
 sudo apt update
-sudo apt upgrade  
+sudo apt upgrade
 ```
 
 ## INSTALLING NGINX
@@ -66,7 +68,7 @@ sudo apt install nginx
 Once is installed sometimes it doesn't automatically run `NGINX` so lets check if its running if not lets enable it
 
 ```bash
-# to check if its running run 
+# to check if its running run
 sudo systemctl status nginx
 
 # if the output doesn't say its running run
@@ -94,11 +96,11 @@ after you have it installed you can now install nodejs by running:
 
 ```bash
 nvm install --lts # installs the supported version
-# It automatically changes to the version you installed 
+# It automatically changes to the version you installed
 # if you want to check the installed version run
 nvm ls
 # and itll show you current installed versions and the one
-# is in use. 
+# is in use.
 ```
 
 If by the time you are doing this the `LTS` of nodejs changed or the one supported in Ghost you can do:
@@ -107,7 +109,7 @@ If by the time you are doing this the `LTS` of nodejs changed or the one support
 nvm ls-remote # it'll show you all the node versions available
 # Select the one that ghost supports
 nvm install v16.5.1 # change the version to the one you want
-# and 
+# and
 nvm use v16.5.1 # again type the one you just installed
 ```
 
@@ -195,7 +197,7 @@ Enter your MySQL username: root # if you used a different user change it to it.
 Enter your MySQL password: # use the same password you put when we set upt mysql
 Enter your Ghost database name: # just press enter
 Setting up "ghost" system user
-? Do you wish to set up "ghost" mysql user? (Y/n) : Y 
+? Do you wish to set up "ghost" mysql user? (Y/n) : Y
 Do you wish to set up Nginx? (Y/n) : Y # so it automatically creates the nginx config files
 Setting up SSL : # press no since we are gonna add manually the certificates to the config file later
 Setting up Systemd: # press yes if you want your site to run on boot
@@ -442,11 +444,11 @@ If you check your site`conf` file the certificates should be applied and all the
 **NOTE**
 
 > A little note on why i don't use the `Zero Trust Dashboard` and I do this manually.
-> 
+>
 > 1 - `Zero Trust dasboard` lacks of configuration options compared to when you create the tunnel manually.
-> 
+>
 > **Example:**
-> 
+>
 > If you install the service and create the tunnel through the `Zero Trust Dashboard` pointing to `localhost:2368` where Ghost server is running and when you the service you are going to encounter into a problem of `ERRO_TO_MANY_REDIRECTS` after many hours trying to know why was this happening I found out that setting `noTLSVerfiy` to `true` the site loads And the only way to do this is when you create the tunnel manually since the `Zero Trust Dashboard` doesn't have this option.
 
 First you have to switch to the `root` user
@@ -487,17 +489,17 @@ To create the tunnel run :
 # Create the tunnel
 cloudflared tunnel create <NAME>
 # Running this command will:
-# 1 - Create a tunnel by establishing a persistent relationship between 
-# the name you provide and a UUID for your tunnel. At this point, 
+# 1 - Create a tunnel by establishing a persistent relationship between
+# the name you provide and a UUID for your tunnel. At this point,
 # no connection is active within the tunnel yet.
 # 2 - Generate a tunnel credentials file in the default cloudflared directory.
 # 3 - Create a subdomain of .cfargotunnel.com.
-#From the output of the command, take note of the tunnel’s UUID and 
+#From the output of the command, take note of the tunnel’s UUID and
 # the path to your tunnel’s credentials file.
 
 # Check that the tunnel was creating
 cloudflared tunnel list
-# It'll prompt you with the tunnels that you have created including 
+# It'll prompt you with the tunnels that you have created including
 # the ones that you created through zero trust dashboard.
 ```
 
@@ -507,7 +509,7 @@ After creating the tunnel it's time to create the `config.yml` file inside the `
 # move the .cloudflared folder
 cd ~/.cloudflared
 # If you LS that directory you will see two files
-ls 
+ls
 cert.pem the-tunnel-you-created-UUID.json
 
 # create the config file
@@ -525,7 +527,7 @@ tunnel: your-tunnel-UUID
 credentials-file: /home/$USER/.cloudflared/your-tunnel-UUID.json
 
 ingress:
-  - hostname: your-domain-name  
+  - hostname: your-domain-name
     service: https://localhost:443
     originRequest:
       noTLSVerify: true
@@ -533,11 +535,11 @@ ingress:
 ```
 
 - **hostname:** Here add the domain you are going to use. Make sure is the same you put in your Ghost setup.
-  
+
 - **service:** Since we added SSL certificates and NGINX it's in charge of redirecting everything we don't need to put the `localhost:2368` where Ghost server is normally running.
-  
+
 - **originRequest:**
-  
+
   - **noTLSVerfiy: true** # Don't remove this or you are going to get the `ERROR_TO_MANY_REDIRECTS` error.
 
 ### Route the traffic
@@ -570,11 +572,11 @@ If you want to run the tunnel as a service follow Cloudflare's guide [Run as a s
 If you added Ghost to systemd, all you have to do is start your service
 
 ```bash
-# The name of the service might be different so look for it in 
+# The name of the service might be different so look for it in
 # /etc/systemd/system/ or /lib/systemd/systemd/
 sudo systemctl start ghost_yourdomain  # you can also stop/disable/enable
-# or 
-sudo service ghost_yourdomain start # you can also stop/disable/enable 
+# or
+sudo service ghost_yourdomain start # you can also stop/disable/enable
 ```
 
 But if you want to run it and see if everything is working properly move to where you have installed it

@@ -37,15 +37,15 @@ Once you downloaded the program run the installer (make sure OBS is not open) it
 ## Adding the audio sources:
 
 > Since you can add multiple programs to the same source I recommend creating a source specially for each type of group for example did it like this:
-> 
+>
 > ![Image 2](image2.png)
-> 
+>
 > The `Music - Audio` group it's a must since here is where you're going to add the programs that bring music to the stream like **Spotify** or **Google chrome(nightbot/youtube)** and its gonna allow to separate it from the VOD audio track.
-> 
+>
 > Also to avoid having to add each audio source to different scenes a good trick is creating a new scene and there add all the audio sources groups you're gonna use and once you are done with setting up everything all you have to do is add that scene as a source in the multiple scenes that you use so every time you add a new group of audio sources it automatically adds them to the mixer of each scene.
-> 
+>
  ![*Scene exclusively to audio sources:*](image3.png)
-> 
+>
 ![*currently in Gaming scene with the Audio scene as a source:*](image4.png)
 
 ### **Add your programs:**
@@ -53,17 +53,19 @@ Once you downloaded the program run the installer (make sure OBS is not open) it
 Here you have to ways to add programs/games.
 
 1. **Add from currently active sessions menu**: In this menu it should give you a list with the most common program. (ex: Discord, Spotify) and some others that the plugin might detect. Once you selected the program just click in the `Add Executable`. You can add multiple programs as a group to the same audio source.
-  
+
   ![](image5.png)
-  
+
 2. **Using the `+` next to the executables area:** If the program you want to add to a certain group of sources doesn't show up in the `Session` menu you might wanna added the program executable manually. For example if you want to add **Google Chrome** and it doesn't show up in the list you add it by clicking in the `+` button and type `chrome.exe` and press **ok** and it should be added to the **Executables** area.
-  
+
   ![](image6.png)
-  
+
 
 > **IMPORTANT !! : SINCE OBS IS CREATING AUDIO TOO BECAUSE YOU HAVE CLIPS/ALERTS AND SUCH THINGS AS BROWSER SOURCE INSIDE OBS YOU SHOULD ADD OBS ITSELF AS AN AUDIO SOURCE SO VIEWERS GET TO HEAR THEM ON STREAM**
 
 If the program you want to add doesn't show up in the **Session** menu and you have to manually add it but you dont know whats the name of the executable you can get it in the `task manager` in the `details` tab. (`Open it by pressing Windows key + type taksmngr` and it should be the first option) there you can see all the programs executable names. (ex: `chrome.exe`). Most of the time the executable is `programname.exe` but sometimes its different.(ex: for Apex Legends is `r5apex.exe`).
+
+<!--adsense-->
 
 **NOTE - League of Legends:**
 
