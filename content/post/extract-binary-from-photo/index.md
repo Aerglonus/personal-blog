@@ -87,6 +87,7 @@ Here is a flag "picoCTF{more_than_m33ts_the_3y3eBdBd2cc}"
 --------------
 ```
 <!--adsense-->
+
 ## Using **xxd** command
 
 The second way to do it will be using the **xxd** command. Using it will start dumping in to the shell all the hex data of the image including the flag.
