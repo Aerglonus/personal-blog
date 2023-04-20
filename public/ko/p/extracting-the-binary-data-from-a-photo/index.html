@@ -518,7 +518,8 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="s2">--------------
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="using-xxd-command">Using <strong>xxd</strong> command</h2>
+</div><!-- raw HTML omitted -->
+<h2 id="using-xxd-command">Using <strong>xxd</strong> command</h2>
 <p>The second way to do it will be using the <strong>xxd</strong> command. Using it will start dumping in to the shell all the hex data of the image including the flag.</p>
 <blockquote>
 <p>xxd creates a hex dump of a given file or standard input. It can also convert a hex dump back to</p>
@@ -782,7 +783,299 @@ So as for the file just create an <strong>.sh</strong> file and paste the code b
     </div>
 </aside>
 
-     
+    <blockquote>
+<p>This is just a write up on resolving picoCTF(2021) Glory of the Garden challenge.</p>
+</blockquote>
+<p>First I tried running <strong>exiftool</strong> which showed me the metadata of the photo where I noticed that the lines with the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Red Tone Reproduction Curve     : <span class="o">(</span>Binary data <span class="m">2060</span> bytes, use -b option to extract<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Green Tone Reproduction Curve   : <span class="o">(</span>Binary data <span class="m">2060</span> bytes, use -b option to extract<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Blue Tone Reproduction Curve    : <span class="o">(</span>Binary data <span class="m">2060</span> bytes, use -b option to extract<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Meaning the photo has son binary data attached to it, now the question is</p>
+<h2 id="how-do-i-extract-that-data">How do I extract that data?</h2>
+<p>After some digging on Youtube School I found various ways to do it</p>
+<blockquote>
+<p>The challenge hint it is about using a hex editor which it will help you extract the data. Using that method you will have to scroll and found the flag.</p>
+</blockquote>
+<h2 id="using-strings-command">Using <strong>strings</strong> command</h2>
+<p>The first way and the most easy one is using <strong>strings</strong> command. Using this command it will show you only the ASCII representation of the strings inside the binary data of the image.</p>
+<blockquote>
+<p>strings - print the sequences of printable characters in files</p>
+</blockquote>
+<p>Command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">strings garden.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">%zR<span class="o">}</span>
+</span></span><span class="line"><span class="cl">Tw1&lt;Oi
+</span></span><span class="line"><span class="cl">yg9S
+</span></span><span class="line"><span class="cl">F7v<span class="o">]</span>
+</span></span><span class="line"><span class="cl">m o5Xex#
+</span></span><span class="line"><span class="cl">V8L<span class="p">;</span>
+</span></span><span class="line"><span class="cl">&lt;<span class="o">]</span>zV<span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">ZqKvu
+</span></span><span class="line"><span class="cl">7g4js<span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">wae:uc<span class="o">(</span>&gt;YwG
+</span></span><span class="line"><span class="cl"><span class="m">6</span>       <span class="sb">`</span>A
+</span></span><span class="line"><span class="cl">xhS~
+</span></span><span class="line"><span class="cl"><span class="nv">wM</span><span class="o">=</span>GV
+</span></span><span class="line"><span class="cl">gDau%~
+</span></span><span class="line"><span class="cl">,~J<span class="p">|</span>
+</span></span><span class="line"><span class="cl">u<span class="o">)(])</span><span class="nv">F</span>
+</span></span><span class="line"><span class="cl"><span class="o">={</span>~5
+</span></span><span class="line"><span class="cl">h--@3
+</span></span><span class="line"><span class="cl">cZi-
+</span></span><span class="line"><span class="cl">M<span class="o">(</span>.I
+</span></span><span class="line"><span class="cl"><span class="o">]</span>hWP<span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">jc#k
+</span></span><span class="line"><span class="cl"><span class="o">=</span>7g<span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">mjx/
+</span></span><span class="line"><span class="cl">s<span class="se">\]</span><span class="p">|</span>.<span class="s2">&#34;Ue
+</span></span></span><span class="line"><span class="cl"><span class="s2">\qZf
+</span></span></span><span class="line"><span class="cl"><span class="s2">--------------
+</span></span></span><span class="line"><span class="cl"><span class="s2">Here is a flag &#34;</span>picoCTF<span class="o">{</span>more_than_m33ts_the_3y3eBdBd2cc<span class="o">}</span><span class="s2">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">--------------
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+<h2 id="using-xxd-command">Using <strong>xxd</strong> command</h2>
+<p>The second way to do it will be using the <strong>xxd</strong> command. Using it will start dumping in to the shell all the hex data of the image including the flag.</p>
+<blockquote>
+<p>xxd creates a hex dump of a given file or standard input. It can also convert a hex dump back to</p>
+</blockquote>
+<pre><code>its original binary form.  Like uuencode(1) and uudecode(1) it allows the transmission  of  binary
+data  in a `mail-safe' ASCII representation, but has the advantage of decoding to standard output. Moreover, it can be used to perform binary file patching.
+</code></pre>
+<p>Command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">xxd garden.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">002304a0: a9e2 cfba bf51 5c75 a71b b6e3 7b1f 97cb  .....Q<span class="se">\u</span>....<span class="o">{</span>...
+</span></span><span class="line"><span class="cl">002304b0: 25a5 f5c5 4bda c9a9 6ecf 7ed4 fc4f e1cd  %...K...n.~..O..
+</span></span><span class="line"><span class="cl">002304c0: <span class="m">2919</span> e6bb 591b 9c2a 73d2 be71 bdf8 977d  <span class="o">)</span>...Y..*s..q...<span class="o">}</span>
+</span></span><span class="line"><span class="cl">002304d0: e27d <span class="m">6574</span> fd3d 1a08 233f bd6e 99c7 6af9  .<span class="o">}</span>et.<span class="o">=</span>..#?.n..j.
+</span></span><span class="line"><span class="cl">002304e0: e2f7 fd6f fc09 ff00 9d6f fc2b ff00 <span class="m">9096</span>  ...o.....o.+....
+</span></span><span class="line"><span class="cl">002304f0: adff 005d ff00 a0ae 7a51 8d4f 68f5 568a  ...<span class="o">]</span>....zQ.Oh.V.
+</span></span><span class="line"><span class="cl">00230500: d9f9 9f63 4b2b c1e5 daf2 7b59 db49 4ba3  ...cK+....<span class="o">{</span>Y.IK.
+</span></span><span class="line"><span class="cl">00230510: f43e b881 5e30 <span class="m">1060</span> <span class="m">8030</span> 47d6 bacb 58cb  .&gt;..^0.<span class="sb">`</span>.0G...X.
+</span></span><span class="line"><span class="cl">00230520: <span class="m">1046</span> 07b5 <span class="m">7216</span> df7e 5ff7 c576 363f ebab  .F..r..~_..v6?..
+</span></span><span class="line"><span class="cl">00230530: b70d 18ce 3ccd 6a7e 6b8d af56 b579 39ca  ....&lt;.j~k..V.y9.
+</span></span><span class="line"><span class="cl">00230540: eeef 53ae <span class="m">8620</span> 31b8 751f <span class="m">9514</span> f7fb cff5  ..S.. 1.u.......
+</span></span><span class="line"><span class="cl">00230550: a2bb bdac <span class="m">9687</span> 98e4 d3b2 e87f ffd9 <span class="m">4865</span>  ..............He
+</span></span><span class="line"><span class="cl">00230560: <span class="m">7265</span> <span class="m">2069</span> <span class="m">7320</span> <span class="m">6120</span> 666c <span class="m">6167</span> <span class="m">2022</span> <span class="m">7069</span>  re is a flag <span class="s2">&#34;pi
+</span></span></span><span class="line"><span class="cl"><span class="s2">00230570: 636f 4354 467b 6d6f 7265 5f74 6861 6e5f  coCTF{more_than_
+</span></span></span><span class="line"><span class="cl"><span class="s2">00230580: 6d33 3374 735f 7468 655f 3379 3365 4264  m33ts_the_3y3eBd
+</span></span></span><span class="line"><span class="cl"><span class="s2">00230590: 4264 3263 637d 220a                      Bd2cc}&#34;</span>.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And that&rsquo;s it !! got the flag but not stopping I kept looking around the internet and found some extra steps to make the output of the <strong>strings</strong> fancier, Like only printing the flag passing<strong>tail</strong> command to the pipeline or getting only the flag without the extra text passing the <strong>cut</strong> command or making a simple bash script to automate everything.</p>
+<h2 id="extra-steps">Extra steps:</h2>
+<h3 id="passing-the-tail-command-to-the-pipeline">Passing the <strong>tail</strong> command to the pipeline</h3>
+<p><code>What does the tail command do?</code></p>
+<blockquote>
+<p>tail - Print the last 10 lines of each FILE to standard output. With more than one FILE, precede each with a header giving the file name.</p>
+</blockquote>
+<pre><code>   -n, --lines=[+]NUM
+          output the last NUM lines, instead of the last 10; or use -n +NUM to output  starting  with
+          line NUM
+</code></pre>
+<p>Since the flag is on the last line of the data I passed the following to the pipeline</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">tail -n <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now the <strong>strings</strong> command should look like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">strings garden.jpg <span class="p">|</span> tail -n <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>and the Output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Here is a flag <span class="s2">&#34;picoCTF{more_than_m33ts_the_3y3eBdBd2cc}&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="passing-the-cut-command-to-the-pipeline">Passing the <strong>cut</strong> command to the pipeline</h3>
+<p><code>What does the cut command do?</code></p>
+<blockquote>
+<p>cut - remove sections from each line of files
+Print selected parts of lines from each FILE to standard output. - d, &ndash;delimiter=DELIM</p>
+</blockquote>
+<pre><code>			use DELIM instead of TAB for field delimiter
+	- f, --fields=LIST
+			 select only these fields; also print any line that contains no delimiter character, unless the -s option is specified
+</code></pre>
+<p>So as you can see the entire string has <strong>&ldquo;Here is a flag&rdquo;</strong> and the flag is surrounded by <strong>&quot;&quot;</strong> so using the <strong>-d</strong> and <strong>-f</strong> come in handy to tell the command what part of the string I want so by passing <strong>-d</strong> flag like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">-d <span class="s1">&#39;&#34;&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>this way the <strong>cut</strong> command it&rsquo;ll be set <strong>(&quot;)</strong> as the delimiter to split the string into fields, the double quotes is used to separate and distinguish one section of text from another within a larger body of text and the way <strong>cut -d</strong> works the <strong>-f</strong> flags needs to be specified or else will throw this error:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cut: you must specify a list of bytes, characters, or fields
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>So the way to do this is finding on what field is the flag <strong>cut</strong> works kind of like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Here is the Flag  <span class="s2">&#34;picoCTF{more_than_m33ts_the_3y3eBdBd2cc}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>______1________<span class="p">|</span> <span class="p">|</span>___________________2____________________<span class="p">|</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>When <strong>cut</strong> processes the input string, it splits it into fields based on the delimiter. In the case of the string <strong>Here is the Flag &ldquo;picoCTF{more_than_m33ts_the_3y3eBdBd2cc}&rdquo;</strong>, the delimiter (&quot;) occurs twice in the string, so cut splits it into three fields:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1. `Here is the flag`
+</span></span><span class="line"><span class="cl">2. &#34;picoCTF{more_than_m33ts_the_3y3eBdBd2cc}&#34;
+</span></span><span class="line"><span class="cl">3. empty field
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After <strong>cut</strong> has split the input string into fields, you can use the <strong>-f</strong> option to specify which fields you want to keep. In this case, we want to keep the second field, which contains the flag. So we use the <strong>-f 2</strong> option to tell <strong>cut</strong> to keep only the second field.</p>
+<p>So, the <strong>-d &lsquo;&quot;&rsquo;</strong> option is not removing the double quotes from the fields. Rather, it is specifying the character that should be used as the delimiter to separate the input string into fields. The full command should look like this now:</p>
+<p>Command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings garden.jpg <span class="p">|</span> tail -n <span class="m">1</span> <span class="p">|</span> cut -d <span class="s1">&#39;&#34;&#39;</span> -f2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">picoCTF<span class="o">{</span>more_than_m33ts_the_3y3eBdBd2cc<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And to automate all this I just pasted the command into a bash file so instead of writing all that line all I have to do is run the file and pass the name of the photo.
+So as for the file just create an <strong>.sh</strong> file and paste the code but instead of specifying the photo name I change for a positional parameter so it can be run this way:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./&lt;filename&gt;.sh garden.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>So the modified command looks like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>strings <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="p">|</span> tail -n <span class="m">1</span> <span class="p">|</span> cut -d <span class="s1">&#39;&#34;&#39;</span> -f2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>In this updated command, <strong>$1</strong> is a positional parameter that refers to the first argument passed to the script when it is executed. So, if you execute the script with the command <strong>./bashfile.sh garden.jpg,</strong> then <strong>$1</strong> will be replaced with <strong>garden.jpg</strong> in the script. This allows you to run the script with different image file names without having to edit the script itself.</p>
+
     
         
     <script src="https://utteranc.es/client.js" repo="aerglonus/blog-comments"

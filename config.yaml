@@ -31,6 +31,9 @@ permalinks:
     page: /:slug/
 
 params:
+    adsense:
+        client: "ca-pub-7891761786816782"
+        inArticleSlot: "4398446754"
     mainSections:
         - post
     featuredImageField: image
