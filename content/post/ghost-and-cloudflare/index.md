@@ -73,7 +73,7 @@ sudo systemctl status nginx
 # if the output doesn't say its running run
 sudo systemctl start nginx
 ```
-
+<!--adsense-->
 ## INSTALLING NODEJS
 
 `sudo apt-get install nodejs` doesn't install out of the box the supported version for Ghost so don't do it before running the following command.
@@ -111,7 +111,7 @@ nvm install v16.5.1 # change the version to the one you want
 # and
 nvm use v16.5.1 # again type the one you just installed
 ```
-
+<!--adsense-->
 ## INSTALLING MYSQL
 
 To install it run the following:
@@ -146,7 +146,7 @@ The password and user are all set up now you can exit MySQL
 ```sql
 quit or \q
 ```
-
+<!--adsense-->
 # INSTALLING GHOST-CLI AND SETTING GHOST FOLDER
 
 To install Ghost-CLI do :
@@ -172,7 +172,7 @@ sudo chown $USER:$USER /var/www/your-folder-site-name
 ```bash
 sudo chmod 775 /var/www/your-folder-site-name
 ```
-
+<!--adsense-->
 ## INSTALL GHOST
 
 Move to the folder where your Ghost site it's going to be installed
@@ -202,7 +202,7 @@ Setting up SSL : # press no since we are gonna add manually the certificates to 
 Setting up Systemd: # press yes if you want your site to run on boot
 Do you want to start Ghost?: N #press no since we need to set up more things before we run the site
 ```
-
+<!--adsense-->
 # SETTING UP CERTBOT AND LETSENCRYPT CERTIFICATES
 
 If your Ubuntu installation comes with a certbot package preinstalled you might need to remove before doing this
@@ -230,7 +230,7 @@ Execute the following instruction on the command line on the machine to ensure t
 ```bash
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
-
+<!--adsense-->
 ## Installing NGINX and CLOUDFLARE plugins
 
 ### Installing NGINX plugin
@@ -250,7 +250,7 @@ sudo apt install certbot python3-certbot-dns-cloudflare
 ```
 
 ---
-
+<!--adsense-->
 ### Generate an API token for CloudFlare
 
 > At this point im assuming you have already added your domain name to Cloudflare as your DNS provide.
@@ -290,7 +290,7 @@ Put your Cloudfalre account email and API key that you got from the previous ste
 dns_cloudflare_email = # the email you use to login to cloudflare
 dns_cloudflare_api_key = # the API you got before
 ```
-
+<!--adsense-->
 ### Request your certificate with certbot
 
 ---
@@ -347,7 +347,7 @@ IMPORTANT NOTES:
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 ```
-
+<!--adsense-->
 ### Telling CERTBOT to add the certificates to the nginx config file of your site.
 
 ---
@@ -436,6 +436,8 @@ If you check your site`conf` file the certificates should be applied and all the
 
 > For more information on how to renew the type `certbot --help` or type `sudo certbot renew` this wil renew all your certificates so if you have multiple certificates for different domains and you want to renew a specific one run `certbot certonly --force-renew -d yourdomain.com`.
 
+
+<!--adsense-->
 ## Setting up Cloudflare Tunnel
 
 ---
@@ -466,6 +468,8 @@ wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloud
 ```
 
 This will download the cloudflared package install it.
+
+<!--adsense-->
 
 ### Authenticate cloudflared
 
@@ -552,7 +556,7 @@ Now assign a CNAME record that points traffic to your tunnel.
 ```bash
 cloudflared tunnel route dns <UUID or NAME> <your-domain>
 ```
-
+<!--adsense-->
 ### Run the tunnel
 
 ---
@@ -593,6 +597,8 @@ ghost run
 ```
 
 This will launch ghost in debug mode and you will be able to see where it fails. To end the process simply do `ctrl + c`.
+
+<!--adsense-->
 
 ### Known issues
 
