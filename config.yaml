@@ -237,11 +237,11 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-# module:
+module:
 # uncomment line below for temporary local development of module
 # replacements: "github.com/CaiJimmy/hugo-theme-stack/v3 -> ../../hugo-theme-stack"
-  # imports:
-    # - path: github.com/martignoni/hugo-notice
+  imports:
+    - path: github.com/martignoni/hugo-notice
     # - path: github.com/CaiJimmy/hugo-theme-stack/v3
 #  disable: false
 sitemap:
