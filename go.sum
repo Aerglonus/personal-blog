@@ -1,2 +1,4 @@
 github.com/CaiJimmy/hugo-theme-stack/v3 v3.12.0 h1:CKcppy8b4RleKtkYDLaxMyWaQXpNm28u033HO75Dhyw=
 github.com/CaiJimmy/hugo-theme-stack/v3 v3.12.0/go.mod h1:IPmCXiIxlFSLFYS0tOmYP6ySLviyeNVSabyvSuaxD+I=
+github.com/martignoni/hugo-notice v0.0.0-20230829114050-2d7d7460bc60 h1:cPU84OKIQJMEfuvgbAem94J5YDn3UBDrth17VM9I0QA=
+github.com/martignoni/hugo-notice v0.0.0-20230829114050-2d7d7460bc60/go.mod h1:MIQPOMgEcbyRC0gNLzQFSgrS+wIy3RuQ/HbaZYtTOKU=

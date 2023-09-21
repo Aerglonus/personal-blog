@@ -18,7 +18,7 @@ series = ["OBS Guide"]
 aliases = ["migrate-from-gist"]
 image = "obs-studio.jpeg"
 +++
-
+<!--adsense-->
 ## **What you need:**
 
 1 - OBS studio
@@ -69,6 +69,8 @@ If the program you want to add doesn't show up in the **Session** menu and you h
 
 For league you have to add two sources `LeagueClientUxRender.exe` and `League of Legends.exe` the first one is for the **league client** audio and the second one is for when youre inside the game audio. Both should automatically appear in the session menu when you open the client and when you get in a game. (you can set up the second by going into a custom game/practice tool).
 
+<!--adsense-->
+
 ## **Telling Twitch which applications audio you want to get saved in the VOD audio:**
 
 Inside OBS settings you want to change the `Output mode` from **simple** to **advanced** once you do this you should see the `Twitch VOD Track` option under the `Audio Track` select the checkbox and by default it has the track `2` you can leave it as it is or change it, up to you. Just keep in mind that it should not be the same as the `Audio Track`.
@@ -96,3 +98,5 @@ See how we have multiple numbers and check boxes in `Tracks`. Remember that by d
 > Note: Only uncheck the track that you selected as your twitch vod track because if you uncheck any other track not only it wont get recorded in the VOD, viewers won't be able to listen to that source on stream.
 
 Now from now on your vods should not record any music source.
+
+<!--adsense-->

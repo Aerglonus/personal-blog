@@ -1,6 +1,6 @@
 languageCode: en-us
 paginate: 5
-theme: stack
+theme: ["hugo-notice","stack"]
 title: Lonus Blog
 baseURL: https://lonusu.com
 languages:
@@ -240,8 +240,9 @@ markup:
 # module:
 # uncomment line below for temporary local development of module
 # replacements: "github.com/CaiJimmy/hugo-theme-stack/v3 -> ../../hugo-theme-stack"
-#imports:
-# - path: github.com/CaiJimmy/hugo-theme-stack/v3
+  # imports:
+    # - path: github.com/martignoni/hugo-notice
+    # - path: github.com/CaiJimmy/hugo-theme-stack/v3
 #  disable: false
 sitemap:
     changefreq: monthly
