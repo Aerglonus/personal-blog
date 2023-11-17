@@ -25,7 +25,7 @@ image = "obs-studio.jpeg"
 
 2 - win-capture-audio, this is the program you need to split the audio. You can download it here :
 
-> https://github.com/bozbez/win-capture-audio/releases/download/v2.2.2-beta/win-capture-audio-2.2.2-beta-setup.exe
+> https://github.com/bozbez/win-capture-audio/releases/download/v2.2.3-beta/win-capture-audio-2.2.3-beta-setup.exe
 
 ## Installation and Usage
 
