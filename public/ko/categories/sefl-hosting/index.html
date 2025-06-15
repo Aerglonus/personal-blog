@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<script>
+    function validateAndRedirect(selectedValue) {
+        const allowedUrls = [
+            "https://lonusu.com/",
+            "https://lonusu.com/ko/"
+        ];
+        if (allowedUrls.includes(selectedValue)) {
+            window.location.href = selectedValue;
+        } else {
+            console.error("Invalid URL selected.");
+        }
+    }
+</script>
 <html lang="ko" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Just dumping everything I learn.'><title>Category: Sefl-hosting - 로누스</title>
@@ -282,7 +295,7 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="validateAndRedirect(this.selectedOptions[0].value)">
                         
                             <option value="https://lonusu.com/" >English</option>
                         
