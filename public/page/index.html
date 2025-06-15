@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<script>
+    function setSafeHref(value) {
+        const allowedUrls = [
+            "https://lonusu.com/",
+            "https://lonusu.com/ko/"
+        ];
+        if (allowedUrls.includes(value)) {
+            window.location.href = value;
+        } else {
+            console.error("Invalid URL:", value);
+        }
+    }
+</script>
 <html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Just dumping everything I learn.'><title>Pages</title>
@@ -282,7 +295,7 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="setSafeHref(this.selectedOptions[0].value)">
                         
                             <option value="https://lonusu.com/" selected>English</option>
                         
