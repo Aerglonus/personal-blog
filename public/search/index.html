@@ -282,7 +282,7 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="handleLanguageChange(this)">
                         
                             <option value="https://lonusu.com/" selected>English</option>
                         
@@ -353,6 +353,19 @@ if (!doNotTrack) {
 
         document.head.appendChild(customFont);
     }());
+
+    function handleLanguageChange(selectElement) {
+        const allowedUrls = [
+            "https://lonusu.com/",
+            "https://lonusu.com/ko/"
+        ];
+        const selectedValue = selectElement.selectedOptions[0].value;
+        if (allowedUrls.includes(selectedValue)) {
+            window.location.href = selectedValue;
+        } else {
+            console.error("Invalid URL selected:", selectedValue);
+        }
+    }
 </script>
 
     </body>
