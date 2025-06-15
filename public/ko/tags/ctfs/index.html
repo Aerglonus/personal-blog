@@ -282,7 +282,15 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="
+                        const allowedUrls = ['https://lonusu.com/', 'https://lonusu.com/ko/'];
+                        const selectedUrl = this.selectedOptions[0].value;
+                        if (allowedUrls.includes(selectedUrl)) {
+                            window.location.href = selectedUrl;
+                        } else {
+                            console.error('Invalid URL selected:', selectedUrl);
+                        }
+                    ">
                         
                             <option value="https://lonusu.com/" >English</option>
                         
