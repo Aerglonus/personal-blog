@@ -282,13 +282,23 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="setSafeHref(this.selectedOptions[0].value)">
                         
                             <option value="https://lonusu.com/" selected>English</option>
                         
                             <option value="https://lonusu.com/ko/" >한국어</option>
                         
                     </select>
+                    <script>
+                        function setSafeHref(value) {
+                            const allowedUrls = ["https://lonusu.com/", "https://lonusu.com/ko/"];
+                            if (allowedUrls.includes(value)) {
+                                window.location.href = value;
+                            } else {
+                                console.error("Invalid URL:", value);
+                            }
+                        }
+                    </script>
                 </li>
             
             
