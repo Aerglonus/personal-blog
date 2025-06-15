@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
+<script>
+    function validateAndRedirect(url) {
+        const allowedUrls = [
+            "https://hugo.lonusu.com/",
+            "https://hugo.lonusu.com/ko/"
+        ];
+        if (allowedUrls.includes(url)) {
+            window.location.href = url;
+        } else {
+            console.error("Invalid URL:", url);
+        }
+    }
+</script>
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Just dumping everything I learn.'><title>Category: Sefl-hosting - Lonus</title>
 
@@ -270,7 +283,7 @@
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="validateAndRedirect(this.selectedOptions[0].value)">
                         
                             <option value="https://hugo.lonusu.com/" selected>English</option>
                         

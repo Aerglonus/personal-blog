@@ -282,7 +282,7 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="validateAndRedirect(this.selectedOptions[0].value)">
                         
                             <option value="https://lonusu.com/" >English</option>
                         
@@ -322,6 +322,18 @@ if (!doNotTrack) {
 
 <script>
     window.searchResultTitleTemplate = "#PAGES_COUNT 페이지 (#TIME_SECONDS 초)"
+
+    function validateAndRedirect(url) {
+        const allowedUrls = [
+            "https://lonusu.com/",
+            "https://lonusu.com/ko/"
+        ];
+        if (allowedUrls.includes(url)) {
+            window.location.href = url;
+        } else {
+            console.error("Invalid URL:", url);
+        }
+    }
 </script><script type="text/javascript" src="/ts/search.js" defer></script>
 
 <footer class="site-footer">

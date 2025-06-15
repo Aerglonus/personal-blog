@@ -282,7 +282,7 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="validateAndRedirect(this.selectedOptions[0].value)">
                         
                             <option value="https://lonusu.com/" selected>English</option>
                         
@@ -294,6 +294,19 @@ if (!doNotTrack) {
             
             
         </div>
+        <script>
+            function validateAndRedirect(selectedValue) {
+                const allowedUrls = [
+                    "https://lonusu.com/",
+                    "https://lonusu.com/ko/"
+                ];
+                if (allowedUrls.includes(selectedValue)) {
+                    window.location.href = selectedValue;
+                } else {
+                    console.error("Invalid URL selected:", selectedValue);
+                }
+            }
+        </script>
     </ol>
 </aside>
 <main class="main full-width">
