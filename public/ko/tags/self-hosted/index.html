@@ -282,7 +282,7 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="const url = this.selectedOptions[0].value; if (url.startsWith('https://lonusu.com/')) { window.location.href = encodeURIComponent(url); }">
                         
                             <option value="https://lonusu.com/" >English</option>
                         
