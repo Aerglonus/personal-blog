@@ -80,7 +80,7 @@
             {{ with .Site.Home.AllTranslations }}
                 <li id="i18n-switch">  
                     {{ partial "helper/icon" "language" }}
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="validateAndRedirect(this.selectedOptions[0].value)">
                         {{ range . }}
                             <option value="{{ .Permalink }}" {{ if eq .Language.Lang $currentLanguageCode }}selected{{ end }}>{{ .Language.LanguageName }}</option>
                         {{ end }}
@@ -97,4 +97,19 @@
             {{ end }}
         </div>
     </ol>
+<script>
+    function validateAndRedirect(url) {
+        const allowedProtocols = ['http:', 'https:'];
+        try {
+            const parsedUrl = new URL(url, window.location.origin);
+            if (allowedProtocols.includes(parsedUrl.protocol)) {
+                window.location.href = parsedUrl.href;
+            } else {
+                console.error('Invalid URL protocol:', parsedUrl.protocol);
+            }
+        } catch (e) {
+            console.error('Invalid URL:', url);
+        }
+    }
+</script>
 </aside>
