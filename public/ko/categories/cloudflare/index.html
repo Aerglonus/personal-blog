@@ -282,13 +282,27 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="handleLanguageChange(this)">
                         
                             <option value="https://lonusu.com/" >English</option>
                         
                             <option value="https://lonusu.com/ko/" selected>한국어</option>
                         
                     </select>
+                    <script>
+                        function handleLanguageChange(selectElement) {
+                            const allowedUrls = [
+                                "https://lonusu.com/",
+                                "https://lonusu.com/ko/"
+                            ];
+                            const selectedUrl = selectElement.selectedOptions[0].value;
+                            if (allowedUrls.includes(selectedUrl)) {
+                                window.location.href = selectedUrl;
+                            } else {
+                                console.error("Invalid URL selected");
+                            }
+                        }
+                    </script>
                 </li>
             
             
