@@ -282,7 +282,7 @@ if (!doNotTrack) {
 
 
 
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                    <select name="language" onchange="try { const url = new URL(this.selectedOptions[0].value); window.location.href = url.href; } catch (e) { console.error('Invalid URL:', e); }">
                         
                             <option value="https://lonusu.com/" >English</option>
                         
